@@ -6,7 +6,8 @@ if (window.console && window.console.info) {
 }
 
 $(document).ready(function () {
-  window.GOVUKFrontend.initAll()
+  window.GOVUKFrontend.initAll();
+  $('main.govuk-main-wrapper#main-content').closest('div.govuk-width-container').removeClass('govuk-width-container')
 })
 
 // import 'bootstrap';
