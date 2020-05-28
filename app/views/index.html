@@ -1,44 +1,360 @@
-
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  GOV.UK Prototype Kit
+National Careers Service
 {% endblock %}
 
-{% block content %}
-
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">
-        The GOV.UK Prototype Kit
-        <span class="govuk-caption-xl">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}
-      <p>
-        This kit lets you rapidly create HTML prototypes of GOV.UK services.
-      </p>
-
-      <p>
-        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
-      </p>
-
-      <h2 class="govuk-heading-m">About this page</h2>
-
-      <p>We recommend you add links to your prototype to this page, rather than delete it.
-        You'll find this page in the kit at '/app/views/index.html'.</p>
-
-      <p>You can change the service name by editing the file '/app/config.js'.</p>
-
-      <h2 class="govuk-heading-m">Examples and documentation</h2>
-
-      <ul class="govuk-list govuk-list--bullet">
-        <li>
-          <a href="/docs/tutorials-and-examples">Example pages and documentation</a>
-        </li>
-        <li>
-          <a href="https://design-system.service.gov.uk">GOV.UK Design System</a>
-        </li>
-      </ul>
-    </div>
+{% block beforeContent %}
+{% include "includes/beta-banner.html" %}
 </div>
+<header class="PROD_hero">
+  <div class="PROD_full-page-width-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Prototypes and mockups</h1>
+        <p class="govuk-body-m">The mockups linked below are for test purposes.</p>
+        <p class="govuk-body-m">They should not be recreated into production code unless the design has been validated by user research and stakeholders.</p>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="govuk-width-container">
+  {% endblock %}
 
+{% block content %}
+<main id="content" role="main">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          Sprint 9
+        </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+            <p class='govuk-body'><a class="govuk-link" href="sprint9/contact-an-adviser/index">'Contact us' flow</a> - see example of <a href="sprint9/contact-an-adviser/error/contact-an-adviser.html">error validation</a>
+            </p>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+          Sprint 10
+        </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+            <p class='govuk-body'><a class="govuk-link" href="sprint10/get-a-job/">'Help to find a job'</a></p>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+          Sprint 11
+        </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+              <ul class="govuk-list">
+              <li><a class="govuk-link" href="sprint11/homepage/index">Generic NCS landing page - v1</a></li>
+                <li><a class="govuk-link" href="sprint11/homepage/index-2">Generic NCS landing page - v2</a></li>
+                <li><a class="govuk-link" href="sprint11/homepage/index-3">Generic NCS landing page - v3</a></li>
+                <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+                <li><a class="govuk-link" href="sprint11/assess-yourself/index">New skills tests landing page - v1</a></li>
+                <li><a class="govuk-link" href="sprint11/assess-yourself/index-2">New skills tests landing page - v2</a></li>
+                <li><a class="govuk-link" href="sprint11/assess-yourself/job-profile">Job profile with side navigation to assessments - v1</a></li>
+                <li><a class="govuk-link" href="sprint11/assess-yourself/job-profile-2">Job profile with side navigation to assessments - v2</a></li>
+              </ul>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+          Sprint 13
+        </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+              <ul class="govuk-list">
+              <li><a class="govuk-link" href="sprint13/jp/waiter">Job profile (waiter) with find a job box - showing vacancies</a></li>
+              </ul>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-5">
+          Sprint 14
+        </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-5" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-5">
+              <ul class="govuk-list">
+              <li><a class="govuk-link" href="sprint14/find-a-course/course-search">Find a course - homepage</a></li>
+              <li><a class="govuk-link" href="sprint14/find-a-course/search-results-v2">Find a course - course search results v2</a></li>
+              <li><a class="govuk-link" href="sprint14/find-a-course/course-details">Find a course - course details</a></li>
+              <li><a class="govuk-link" href="sprint14/skills-assessment/index">Skills assessment - landing page</a></li>
+              <li><a class="govuk-link" href="sprint14/skills-assessment/job-profile">Job profile with skills assessment link</a></li>
+              </ul>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-6">
+          Sprint 15
+        </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-6" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-6">
+              <ul class="govuk-list">
+              <li><a class="govuk-link" href="sprint15/jp/waiter">Find a job - waiter - happy path</a></li>
+              <li><a class="govuk-link" href="sprint15/jp/waiter-3">Find a job - waiter - 500 error from API</a></li>
+              <li><a class="govuk-link" href="sprint15/jp/waiter-4">Find a job - waiter - zero vacancies</a></li>
+              <li><a class="govuk-link" href="sprint15/jp/waiter-5">Find a job - waiter - only 1 vacancy</a></li>
+              </ul>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-7">
+          Sprint 16
+        </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-7" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-7">
+              <ul class="govuk-list">
+              <li><a class="govuk-link" href="sprint16/about-us">About us page with new skills assessment paragraph</a></li>
+              <li><a class="govuk-link" href="sprint16/find-a-course/search-results-v2">Find a course - course search results v2.1</a> - relates to <a href="https://skillsfundingagency.atlassian.net/browse/DFC-9439" target="_blank">DFC-9439</a></li>
+              <li><a class="govuk-link" href="sprint16/jp/admin-assistant">Job profile - with link to Find a Job</a></li>
+              </ul>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-8">
+          Sprint 17
+        </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-8" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-8">
+              <ul class="govuk-list">
+              <li><a class="govuk-link" href="sprint16/new-fac/efl-teacher">EFL teacher - find a course GDS</a></li>
+              <li><a class="govuk-link" href="sprint16/new-fac/efl-teacher-2">EFL teacher - find a course non-GDS</a></li>
+              <li><a class="govuk-link" href="sprint16/new-fac/explore-results">GDS Find a course search results</a></li>
+              <li><a class="govuk-link" href="sprint16/new-fac/explore-course">GDS Find a course details</a></li>
+              </ul>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-9">
+          Sprint 18
+        </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-9" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-9">
+              <ul class="govuk-list">
+              <li><a class="govuk-link" href="sprint18/it-trainer">IT trainer - find a course GDS</a></li>
+              <li><a class="govuk-link" href="sprint18/it-trainer-2">IT trainer - find a course non-GDS</a></li>
+              </ul>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-10">
+          Sprint 19
+        </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-10" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-10">
+              <ul class="govuk-list">
+              <li><a class="govuk-link" href="sprint19/it-trainer.html">IT trainer job profile - points to course details v1</a></li>
+              <li><a class="govuk-link" href="sprint19/it-trainer-2.html">IT trainer job profile - points to course details v2</a></li>
+              <li><a class="govuk-link" href="sprint19/course-search">FAC course search homepage</a></li>
+              <li><a class="govuk-link" href="sprint19/gds-course-details">GDS - search results</a></li>
+              <li><a class="govuk-link" href="sprint19/gds-course-details">GDS - course details v1</a></li>
+              <li><a class="govuk-link" href="sprint19/gds-course-details-2">GDS - course details v2</a></li>
+              <li><a class="govuk-link" href="sprint19/course-details">STILL WORK IN PROGRESS: non-GDS - course details</a></li>
+              </ul>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-11">
+          Sprint 20
+        </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-11" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-11">
+              <ul class="govuk-list">
+              <li><a class="govuk-link" href="sprint20/homepage">Homepage mockup</a></li>
+              <li><a class="govuk-link" href="sprint20/search-results">FaC course search results</a></li>
+              <li><a class="govuk-link" href="sprint20/course-search">FaC course search homepage</a></li>
+              <li><a class="govuk-link" href="sprint20/gds-course-details-2">FaC course details</a></li>
+              <li><a class="govuk-link" href="sprint20/it-trainer-2">IT trainer with FaC</a></li>
+              </ul>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-12">
+          Sprint 21
+        </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-12" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-12">
+              <ul class="govuk-list">
+              <li><a class="govuk-link" href="sprint21/homepage">Homepage mockup - rings with content version 1</a></li>
+              <li><a class="govuk-link" href="sprint21/homepage-1">Homepage mockup - rings with content version 2</a></li>
+              <li><a class="govuk-link" href="sprint21/homepage-2">Homepage mockup - rings with no content</a></li>
+              <li><a class="govuk-link" href="sprint21/homepage-3">Homepage mockup - cards with content based on directgov</a></li>
+              <li><a class="govuk-link" href="sprint21/homepage-4">Homepage mockup - cards with no content</a></li>
+              <li><a class="govuk-link" href="sprint21/search-results">FaC course search results</a></li>
+              <li><a class="govuk-link" href="sprint21/course-search">FaC course search homepage</a></li>
+              <li><a class="govuk-link" href="sprint21/gds-course-details-2">FaC course details</a></li>
+              <li><a class="govuk-link" href="sprint21/it-trainer-2">IT trainer with FaC</a></li>
+              </ul>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-13">
+          Sprint 23
+        </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-13" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-13">
+              <ul class="govuk-list">
+              <li><a class="govuk-link" href="sprint23/homepage">Homepage which links to FaC</a></li>
+              <li><a class="govuk-link" href="sprint23/find-course">FaC filter page with all courses</a></li>
+              <li><a class="govuk-link" href="sprint23/find-course-2">FaC filter page with IT courses searched by keyword</a></li>
+              <li><a class="govuk-link" href="sprint23/gds-course-details">FaC course details for online course</a></li>
+              <li><a class="govuk-link" href="sprint23/gds-course-details-1">FaC course details for work based course</a></li>
+              <li><a class="govuk-link" href="sprint23/gds-course-details-2">FaC course details for classroom based course</a></li>
+              </ul>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-14">
+          Sprint 27
+        </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-14" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-14">
+              <ul class="govuk-list">
+              <li><a class="govuk-link" href="sprint27/homepage">Homepage which links to FaC</a></li>
+              <li><a class="govuk-link" href="sprint27/find-course">FaC filter page with all courses</a></li>
+              <li><a class="govuk-link" href="sprint27/find-course-2">FaC filter page with IT courses searched by keyword</a></li>
+              <li><a class="govuk-link" href="sprint27/course-details-online">FaC course details for online course</a></li>
+              <li><a class="govuk-link" href="sprint27/course-details-work">FaC course details for work based course</a></li>
+              <li><a class="govuk-link" href="sprint27/course-details-work-national">FaC course details for work based national course</a></li>
+              <li><a class="govuk-link" href="sprint27/course-details-classroom">FaC course details for classroom based course</a></li>
+              </ul>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-15">
+          Sprint 28
+        </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-15" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-15">
+              <ul class="govuk-list">
+              <li><a class="govuk-link" href="sprint28/find-a-course/homepage">Homepage which links to FaC</a></li>
+              <li><a class="govuk-link" href="sprint28/find-a-course/search-results-v2">Example search results</a></li>
+              </ul>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-16">
+          Sprint 32
+        </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-16" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-16">
+              <ul class="govuk-list">
+              <li><a class="govuk-link" href="sprint32/starthome">Start page for homepage UR</a></li>
+              <li><a class="govuk-link" href="sprint32/home3">Homepage for Sprint 32 UR</a></li>
+              <li><a class="govuk-link" href="sprint32/startjp">Start page for job profile UR</a></li>
+              <li><a class="govuk-link" href="sprint32/jp">Example job profile for Sprint 32 UR</a></li>
+              </ul>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-17">
+          Sprint 33
+        </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-17" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-17">
+              <ul class="govuk-list">
+              <li><a class="govuk-link" href="sprint33/starthome">Start page for homepage UR</a></li>
+              <li><a class="govuk-link" href="sprint33/home3">Homepage for Sprint 33 UR</a></li>
+              <li><a class="govuk-link" href="sprint33/startjp">Start page for job profile UR</a></li>
+              <li><a class="govuk-link" href="sprint33/jp">Example job profile for Sprint 33 UR</a></li>
+              </ul>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-18">
+          Sprint 36
+        </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-18" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-18">
+              <ul class="govuk-list">
+              <li><a class="govuk-link" href="sprint36/cookies/home">Cookies homepage</a></li>
+              <li><a class="govuk-link" href="sprint36/starthome">UCCI round 4 homepage</a></li>
+              </ul>
+
+              <p class="govuk-heading-s">Online courses round 1</p>
+              <ul class="govuk-list">
+              <li><a class="govuk-link" href="sprint36/online-courses/starthome">Online courses round 1</a></li>
+              <li><a class="govuk-link" href="sprint36/online-courses/landing">Online courses - landing page</a></li>
+              <li><a class="govuk-link" href="sprint36/online-courses/topics">Online courses - topics page</a></li>
+              <li><a class="govuk-link" href="sprint36/online-courses/courses">Online courses - courses page</a></li>
+              <li><a class="govuk-link" href="sprint36/online-courses/choosing-an-online-course">Choosing an online course</a></li>
+              <li><a class="govuk-link" href="sprint36/online-courses/the-benefits-of-online-learning">The benefits of online learning</a></li>
+              </ul>
+
+              <p class="govuk-heading-s">Online courses round 2</p>
+              <ul class="govuk-list">
+              <li><a class="govuk-link" href="sprint36/online-courses/2/homepage">Homepage with banner</a></li>
+              <li><a class="govuk-link" href="sprint36/online-courses/2/landing">Online courses - landing page</a></li>
+              <li><a class="govuk-link" href="sprint36/online-courses/2/courses">Online courses - courses page</a></li>
+              <li><a class="govuk-link" href="sprint36/online-courses/2/choosing-an-online-course">Choosing an online course</a></li>
+              <li><a class="govuk-link" href="sprint36/online-courses/2/the-benefits-of-online-learning">The benefits of online learning</a></li>
+              </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</main>
 {% endblock %}

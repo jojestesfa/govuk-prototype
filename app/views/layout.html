@@ -1,6 +1,4 @@
-{#- We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework. -#}
 {%- set assetPath = '/govuk/assets' -%}
-
 {% extends "govuk/template.njk" %}
 
 {% from "govuk/components/accordion/macro.njk"        import govukAccordion %}
@@ -44,12 +42,11 @@
     homepageUrl: "/",
     serviceName: serviceName,
     serviceUrl: "/",
-    containerClasses: "govuk-width-container"
+    containerClasses: "govuk-width-container1"
   }) }}
 {% endblock %}
 
 {% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
-
 {% if useAutoStoreData %}
   {% block footer %}
     {{ govukFooter({

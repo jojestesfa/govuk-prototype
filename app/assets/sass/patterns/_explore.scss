@@ -1,0 +1,32 @@
+.explorecareers_nav {
+  display: block;
+  float: right;
+  width: 100%;
+
+  ul {
+    list-style: none;
+    display: block;
+
+    li {
+      float: left;
+      margin-right: 15px;
+
+      a {
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+        &:active {
+          color: #1d8feb;
+        }
+      }
+      .selected {
+        color: #1d8feb;
+      }
+    }
+  }
+}

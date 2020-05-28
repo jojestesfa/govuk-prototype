@@ -6,15 +6,1553 @@ $govuk-assets-path: '/govuk/assets/';
 
 // Import GOV.UK Frontend and any extension styles if extensions have been configured
 @import "lib/extensions/extensions";
+@import "components/colors";
+@import 'node_modules/govuk_frontend_toolkit/stylesheets/colours/palette.scss';
+@import 'node_modules/govuk_frontend_toolkit/stylesheets/conditionals.scss';
+@import 'node_modules/govuk_frontend_toolkit/stylesheets/grid_layout.scss';
+@import 'node_modules/govuk_frontend_toolkit/stylesheets/typography.scss';
+@import 'node_modules/govuk_frontend_toolkit/stylesheets/_url-helpers.scss';
 
 // Patterns that aren't in Frontend
-@import "patterns/step-by-step-header";
-@import "patterns/step-by-step-nav";
-@import "patterns/step-by-step-related";
+@import "patterns/step-by-step-navigation";
 @import "patterns/task-list";
 @import "patterns/related-items";
+@import "patterns/explore";
 
 // Components that aren't in Frontend
 @import "components/cookie-banner";
+@import "components/jobprofile";
+@import "components/filters";
+@import "components/search";
+@import "components/facet";
+@import "components/pagination";
+
+// EXPERIMENTAL - USER TESTING
+@import "components/new-fac/_course-details.scss";
+@import "components/homepage";
+@import "components/currency-input";
+@import "components/discoverywork";
+
+// NCS COMPONENTS
+
+
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+$site-width:960px;
+
+// Change to header to change colour of blue border underneath header.
+.govuk-header__container {
+  border-bottom: 10px solid #207e77;
+}
+
+.govuk-header__container-beta {
+  border-bottom: 0 solid;
+}
+
+nav {
+  .govuk-tag {
+    margin: 0 0 0 4px;
+    top: -6px;
+    font-size: 10px;
+    position: relative;
+    padding: 2px 5px;
+  }
+}
+
+// Change to desktop header to fix margin/padding
+.govuk-header__link--service-name {
+  @include govuk-media-query(desktop) {
+    margin-bottom: -1px;
+  }
+}
+
+.govuk-header__navigation {
+  @include govuk-media-query(desktop) {
+    margin: 0px 0px 4px;
+	  padding: 6px 10px;
+  }
+}
+
+.app-related-items {
+  //border-top: 10px solid govuk-colour("blue");
+  border-top: 10px solid #207e77;
+  padding-top: govuk-spacing(2);
+}
+
+.app-related-items .govuk-list > li {
+  margin-bottom: govuk-spacing(2);
+}
+
+.govuk-related-items {
+  margin-top: 30px;
+  border-top: 10px solid #005ea5;
+  padding-top: 5px;
+}
+
+/* -------------------------------------------------------------
+	Hero
+------------------------------------------------------------- */
+.PROD_full-page-width-wrapper {
+  max-width: $site-width;
+
+  @include ie-lte(8) {
+    width: $site-width;
+  }
+
+  margin: 0 $gutter-half;
+
+  @include media(tablet) {
+    margin: 0 $gutter;
+  }
+
+  @include media($min-width: ($site-width + $gutter * 2)) {
+    margin: 0 auto;
+  }
+}
+
+.PROD_hero_img {
+  background: #8C1454;
+  margin: 0 0 0em 0;
+  @include media(tablet) {
+    padding: 40px 0px 30px;
+  }
+  .govuk-heading-xl {
+    margin: 0 0 30px 0;
+    color: #FFFFFF;
+  }
+  p {
+    color: #FFFFFF;
+    a {
+      font-weight: bold;
+      color: #FFFFFF;
+    }
+  }
+}
+
+.PROD_hero {
+  background: $careers-turquoise;
+  margin: 0 0 0em 0;
+  padding: 25px 0px 15px;
+  color: #ffffff;
+  @include media(tablet) {
+    padding: 30px 0px 10px;
+  }
+  .govuk-heading-xl {
+    margin: 0 0 30px 0;
+    color: #FFFFFF;
+  }
+  p {
+    color: #FFFFFF;
+    a {
+      font-weight: bold;
+      color: #FFFFFF;
+    }
+  }
+}
+
+.PROD_hero_beta {
+  background: $careers-turquoise;
+  margin: 0 0 0em 0;
+  padding: 5px 0px 0px;
+  color: #ffffff;
+  p {
+    color: #FFFFFF;
+    a {
+      font-weight: bold;
+      color: #FFFFFF;
+    }
+  }
+}
+
+
+//Changes to the hero when inside a full width container
+.PROD_full-page-width-wrapper {
+  .PROD_hero_pink {
+    padding: 25px 0 15px;
+    @include media(tablet) {
+      padding: 40px 0 30px;
+    }
+  }
+}
+
+.PROD_hero .PROD_search {
+  background: $white;
+  margin-bottom: 15px;
+
+  &:after { //Clearfix
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .PROD_search__input-container {
+    float: left;
+    width: 100%;
+    padding: 0 41px 0 0;
+    margin: 0 -41px 0 0;
+    box-sizing: border-box;
+    position: relative;
+  }
+  .PROD_search__input {
+    position: relative;
+    border: none;
+    height: 40px;
+    font-size: 19px;
+    padding: 6px;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 2;
+    float:left;
+    z-index: 10;
+    font-size:16px;
+    @include media(tablet){
+      font-size:19px;
+    }
+  }
+  .PROD_search__submit {
+    float:left;
+    text-indent: -1000em;
+    position: relative;
+    float:left;
+    z-index: 1;
+    border-radius: 0;
+    background: $black;
+    width: 41px;
+    height: 40px;
+    border: none;
+    background: url(/public/images/search-button.png) $black no-repeat 4px 50%;
+    &:hover {
+      cursor: pointer;
+    }
+    &:focus {
+      z-index: 15;
+      position: relative;
+    }
+  }
+}
+
+.ec-hero {
+  background-color: #207e77;
+  color: #ffffff;
+  padding: 30px 0 10px;
+
+  * {
+    color: #ffffff;
+  }
+
+  input, select {
+    border: none !important;
+    color: black;
+  }
+
+  option {
+    color: black;
+  }
+
+  button {
+    background-color: black;
+
+    &:hover {
+      background-color: black;
+      text-decoration: underline;
+    }
+  }
+  .govuk-heading-xl {
+    margin: 0 0 30px 0;
+    color: #FFFFFF;
+  }
+  p {
+    color: #FFFFFF;
+    a {
+      font-weight: bold;
+      color: #FFFFFF;
+    }
+  }}
+
+
+
+/* -------------------------------------------------------------
+	Job Profile Search / Related
+------------------------------------------------------------- */
+
+.PROD_jobprofile_search {
+  background-color: $careers-turquoise;
+  color: $white;
+  padding: 10px;
+  margin-bottom: 30px;
+
+  .heading-small {
+    margin: 5px 0 10px 0 !important;
+    padding: 0 !important;
+  }
+
+  .PROD_search {
+    background: $white;
+
+    &:after { //Clearfix
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .PROD_search__input-container {
+      float: left;
+      width: 100%;
+      padding: 0 41px 0 0;
+      margin: 0 -41px 0 0;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    .PROD_search__input {
+      position: relative;
+      border: none;
+      height: 40px;
+      font-size: 19px;
+      padding: 6px;
+      width: 100%;
+      box-sizing: border-box;
+      z-index: 2;
+      float: left;
+      z-index: 10;
+      font-size: 16px;
+
+      @include media(tablet) {
+        font-size: 19px;
+      }
+    }
+
+    .PROD_search__submit {
+      float: left;
+      text-indent: -1000em;
+      position: relative;
+      float: left;
+      z-index: 1;
+      border-radius: 0;
+      width: 41px;
+      height: 40px;
+      border: none;
+      background: url(/public/images/search-button.png) $black no-repeat 4px 50%;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:focus {
+        z-index: 15;
+        position: relative;
+      }
+    }
+  }
+}
+
+.PROD_jobprofile_search2 {
+  background-color: $white !important;
+  color: $black;
+  padding: 0 !important;
+  margin: 20px 0 0 0;
+
+  .PROD_search__input {
+    border: 1px solid #bbb !important;
+  }
+
+  .PROD_search__submit {
+    background-color: $light-blue !important;
+  }
+}
+
+.PROD_related-careers, .PROD_related-items-alt {
+  li {
+
+    @include core-19;
+
+    a {
+      display: block;
+      padding: 5px 0;
+      border-bottom: 1px solid #bfc1c3;
+      text-decoration: none;
+
+      @include media(tablet) {
+        padding: 10px 0;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.PROD_govuk-related-items-search {
+  border-top: none;
+  margin-top: 30px;
+  padding-top: 0px;
+
+  @include media(tablet) {
+    border-top: 6px solid $careers-turquoise;
+    padding-top: 10px;
+    margin-top: 34px;
+  }
+}
+
+section.PROD_icon-buttons {
+  border-top: 1px solid $grey-3;
+
+  h3 {
+    margin-top: 30px;
+  }
+  ul {
+    li {
+      float: left;
+      width: auto;
+
+      a {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+.PROD_jobprofile_categories, .PROD_jobprofile_categoriesV2 {
+  list-style: none;
+  top: -35px;
+  position: relative;
+
+  @include media(mobile) {
+    top: -15px;
+
+    li {
+      width: 100%;
+      margin: 0 0 5px 0;
+    }
+  }
+
+  li {
+    margin: 0 5px 5px 0;
+    display: inline-block;
+    font-size: 15px;
+
+    a {
+      color: $white;
+      display: inline-block;
+      text-decoration: none;
+      background-color: $careers-turquoise;
+      padding: 10px 15px 8px 15px;
+
+      &:hover {
+        text-decoration: underline;
+        background-color: darken($careers-turquoise, 5%);
+      }
+    }
+  }
+}
+
+.PROD_jobprofile_categoriesV2 {
+  top: 0 !important;
+
+  li {
+    width: 100%;
+
+    a {
+      font-size: 16px;
+
+      &:after {
+        content: ">";
+        margin-left: 10px;
+        font-weight: bold;
+
+      }
+    }
+  }
+}
+
+.PROD_icon-buttons {
+  ul {
+    margin: 0;
+    padding-left: 0
+  }
+
+  li:first-child {
+    padding-left: 0;
+  }
+
+  li {
+    list-style: none;
+    margin-right: 10px;
+    display: block;
+    margin-bottom: 20px;
+    width: 50%;
+
+    a {
+      padding-left: 25px;
+      background-repeat: no-repeat;
+      background-size: 21px 21px;
+      font-size: 16px;
+      line-height: 1.25;
+
+      &.twitter {
+        background-image: url(https://insidegovuk.blog.gov.uk/wp-content/themes/gds-blogs/assets/img/icon-twitter.svg);
+      }
+
+      &.facebook {
+        background-image: url(https://insidegovuk.blog.gov.uk/wp-content/themes/gds-blogs/assets/img/icon-facebook.svg);
+      }
+
+      &.google {
+        background-image: url(https://insidegovuk.blog.gov.uk/wp-content/themes/gds-blogs/assets/img/icon-google-plus.svg);
+      }
+
+      &.linkedin {
+        background-image: url(https://insidegovuk.blog.gov.uk/wp-content/themes/gds-blogs/assets/img/icon-linkedin.svg);
+      }
+
+      &.email {
+        background-image: url(https://insidegovuk.blog.gov.uk/wp-content/themes/gds-blogs/assets/img/icon-email.svg);
+      }
+    }
+  }
+}
+
+.homepage-categories {
+
+  li {
+    padding-bottom: 0.526em;
+    margin-bottom: 0 !important;
+    display: inline-block;
+    width: 100%;
+  }
+
+  @include media(tablet) {
+    -moz-column-count: 2;
+    -moz-column-gap: 30px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 30px;
+    column-count: 2;
+    column-gap: 30px;
+  }
+
+  @include media(desktop) {
+    -moz-column-count: 3;
+    -moz-column-gap: 30px;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 30px;
+    column-count: 3;
+    column-gap: 30px;
+    padding: 0px;
+  }
+
+  a {
+    @include bold-19;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.category-list {
+  margin-bottom: 5px;
+  @include media(tablet){
+    margin-bottom: 20px;
+  }
+  li {
+    margin-bottom: 0.526em;
+  }
+  a {
+    font-weight: bold;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+    &.selected {
+      font-weight: bold;
+      color: $grey-1 !important;
+      cursor: default;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.govuk-secondary-colour {
+  color: $govuk-secondary-text-colour;
+}
+
+
+// NCS - EXTENDED PATTERNS
+div,span,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark {
+    border: none;
+    margin: 0;
+    padding: 0
+}
+
+
+
+
+// NCS BRANDING
+
+.brand--national-careers-service .brand__border-color,.brand--national-careers-service .brand__border-color {
+    border-color: #231f20
+}
+
+.brand--national-careers-service .brand__color {
+    color: #a50b67
+}
+
+
+
+
+
+.brand--national-careers-service.brand__border-color,.brand--national-careers-service .brand__border-color {
+    border-color: #9c132e
+}
+
+.govuk-header {
+	background: none;
+	
+	.govuk-header__link:link, .govuk-header__link:visited {
+		color:#000; margin-left: 15px;
+	}
+}
+.govuk-header__container {
+	border-bottom:0px;
+	padding-bottom:10px;
+}
+
+
+
+#global-header #logo:focus {
+    background-color: #ffdd00;
+    border-color: #ffdd00;
+    box-shadow: 0 -2px #ffdd00, 0 4px #0b0c0c;
+    color: #0b0c0c;
+    outline: 3px solid transparent;
+    text-decoration: none
+}
+
+#global-header .govuk-header__logotype {
+    margin-right: 0
+}
+
+#global-header .govuk-header__logotype-text {
+    position: relative;
+    top: 4px
+}
+#global-header .header-wrapper {
+    max-width: 990px;
+    margin: 0 auto;
+    padding-top: 32px;
+    padding-bottom: 12px
+}
+
+
+
+
+
+
+
+
+.govuk-main-wrapper--auto-spacing:first-child {
+	padding-top: 10px;
+}
+.ncs-masthead-container .govuk-grid-row {
+	margin:0;
+}
+.ncs-masthead-container .ncs-masthead {
+    padding: 10px;
+    color: #fff;
+    background-color: #A50B67;
+	
+	.govuk-select {
+		margin-bottom: 10px;
+	}
+	span.govuk-body-m {
+		color:#fff;
+	}
+}
+
+@media (min-width: 40.0625em) {
+    .ncs-masthead {
+		margin:0x;
+    }
+}
+
+.gem-c-image-card__image {
+    display: block;
+    max-width: 100%;
+}
+
+
+.gem-c-heading {
+    color: #0b0c0c;
+    font-family: "nta", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.1111111111;
+    margin: 0
+}
+
+@media print {
+    .gem-c-heading {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-heading {
+        font-size:27px;
+        line-height: 1.1111111111
+    }
+}
+
+@media print {
+    .gem-c-heading {
+        font-size: 18pt;
+        line-height: 1.15
+    }
+}
+
+.gem-c-heading--font-size-24 {
+    font-family: "nta", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.1111111111
+}
+
+@media print {
+    .gem-c-heading--font-size-24 {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-heading--font-size-24 {
+        font-size:24px;
+        line-height: 1.25
+    }
+}
+
+@media print {
+    .gem-c-heading--font-size-24 {
+        font-size: 18pt;
+        line-height: 1.15
+    }
+}
+
+.gem-c-heading--font-size-19 {
+    font-family: "nta", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.25
+}
+
+@media print {
+    .gem-c-heading--font-size-19 {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-heading--font-size-19 {
+        font-size:19px;
+        line-height: 1.3157894737
+    }
+}
+
+@media print {
+    .gem-c-heading--font-size-19 {
+        font-size: 14pt;
+        line-height: 1.15
+    }
+}
+
+.gem-c-heading--mobile-top-margin {
+    margin-top: 30px;
+    margin-bottom: 15px
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-heading--mobile-top-margin {
+        margin-top:0;
+        margin-bottom: 30px
+    }
+}
+
+.app-c-topic-list__item {
+    font-family: "nta", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.25;
+    list-style: none;
+    margin-bottom: 10px
+}
+
+@media print {
+    .app-c-topic-list__item {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .app-c-topic-list__item {
+        font-size:19px;
+        line-height: 1.3157894737
+    }
+}
+
+@media print {
+    .app-c-topic-list__item {
+        font-size: 14pt;
+        line-height: 1.15
+    }
+}
+
+.app-c-topic-list__link--no-underline {
+    text-decoration: none
+}
+
+.app-c-topic-list__link--no-underline:hover {
+    text-decoration: underline
+}
+
+.app-c-topic-list__link--no-underline:hover:focus {
+    text-decoration: none
+}
+
+.app-c-topic-list--small .app-c-topic-list__item {
+    margin-bottom: 5px
+}
+
+.app-c-topic-list--small .app-c-topic-list__link {
+    font-family: "nta", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.1428571429
+}
+
+@media print {
+    .app-c-topic-list--small .app-c-topic-list__link {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .app-c-topic-list--small .app-c-topic-list__link {
+        font-size:16px;
+        line-height: 1.25
+    }
+}
+
+@media print {
+    .app-c-topic-list--small .app-c-topic-list__link {
+        font-size: 14pt;
+        line-height: 1.2
+    }
+}
+
+.app-c-topic-list--margin-bottom {
+    margin-bottom: 15px;
+	padding-left:0px;
+}
+
+@media (min-width: 40.0625em) {
+    .app-c-topic-list--margin-bottom {
+        margin-bottom:45px
+    }
+}
+
+
+.gem-c-image-card {
+    color: #0b0c0c;
+    position: relative;
+    margin-bottom: 30px
+}
+
+.gem-c-image-card:after {
+    content: "";
+    display: block;
+    clear: both
+}
+
+@media print {
+    .gem-c-image-card {
+        color: #000000
+    }
+}
+
+.gem-c-image-card__image-wrapper {
+    margin: 0
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-image-card__image-wrapper {
+        margin-bottom:10px
+    }
+}
+
+@media (max-width: 40.0525em) {
+    .gem-c-image-card__image-wrapper+.gem-c-image-card__text-wrapper {
+        padding-left:0
+    }
+}
+
+@media (min-width: 20em) and (max-width: 40.0525em) {
+    .gem-c-image-card {
+        margin:0 -15px 30px -15px
+    }
+
+    .gem-c-image-card__image-wrapper {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0 15px
+    }
+}
+
+@media (min-width: 20em) and (max-width: 40.0525em) and (min-width: 20em) {
+    .gem-c-image-card__image-wrapper {
+        width:33.3333%;
+        float: left
+    }
+}
+
+@media (min-width: 20em) and (max-width: 40.0525em) {
+    .gem-c-image-card__text-wrapper {
+        box-sizing:border-box;
+        width: 100%;
+        padding: 0 15px
+    }
+}
+
+@media (min-width: 20em) and (max-width: 40.0525em) and (min-width: 20em) {
+    .gem-c-image-card__text-wrapper {
+        width:66.6666%;
+        float: left
+    }
+}
+
+.gem-c-image-card__image {
+    display: block;
+    max-width: 100%
+}
+
+.gem-c-image-card__title {
+    font-family: "nta", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.25;
+    margin: 0
+}
+
+@media print {
+    .gem-c-image-card__title {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-image-card__title {
+        font-size:19px;
+        line-height: 1.3157894737
+    }
+}
+
+@media print {
+    .gem-c-image-card__title {
+        font-size: 14pt;
+        line-height: 1.15
+    }
+}
+
+.gem-c-image-card__title-link {
+    text-decoration: none
+}
+
+.gem-c-image-card__title-link:hover {
+    text-decoration: underline
+}
+
+.gem-c-image-card__title-link:focus {
+    text-decoration: none
+}
+
+.gem-c-image-card__title-link:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: rgba(255,255,255,0)
+}
+
+@media (min-width: 20em) and (max-width: 40.0525em) {
+    .gem-c-image-card__title-link:after {
+        left:15px;
+        right: 15px
+    }
+}
+
+.gem-c-image-card__context,.gem-c-image-card__metadata,.gem-c-image-card__description {
+    position: relative;
+    z-index: 2
+}
+
+.gem-c-image-card__context,.gem-c-image-card__metadata {
+    font-family: "nta", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.25;
+    margin: 0 0 7.5px;
+    color: #626a6e
+}
+
+@media print {
+    .gem-c-image-card__context,.gem-c-image-card__metadata {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-image-card__context,.gem-c-image-card__metadata {
+        font-size:14px;
+        line-height: 1.4285714286
+    }
+}
+
+@media print {
+    .gem-c-image-card__context,.gem-c-image-card__metadata {
+        font-size: 12pt;
+        line-height: 1.2
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-image-card__context,.gem-c-image-card__metadata {
+        margin-bottom:0
+    }
+}
+
+
+
+.gem-c-image-card__description {
+    font-family: "nta", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.1428571429;
+    padding-top: 7.5px;
+    word-wrap: break-word
+}
+
+@media print {
+    .gem-c-image-card__description {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-image-card__description {
+        font-size:16px;
+        line-height: 1.25
+    }
+}
+
+@media print {
+    .gem-c-image-card__description {
+        font-size: 14pt;
+        line-height: 1.2
+    }
+}
+
+.gem-c-image-card__list {
+    font-family: "nta", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.1428571429;
+    position: relative;
+    z-index: 2;
+    padding: 7.5px 0 0 0;
+    margin: 0;
+    list-style: none
+}
+
+@media print {
+    .gem-c-image-card__list {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-image-card__list {
+        font-size:16px;
+        line-height: 1.25
+    }
+}
+
+@media print {
+    .gem-c-image-card__list {
+        font-size: 14pt;
+        line-height: 1.2
+    }
+}
+
+.gem-c-image-card__list .gem-c-image-card__list-item {
+    margin-bottom: 5px
+}
+
+
+
+.organisation__brand-border-top {
+    border-top-width: 5px;
+    border-top-style: solid;
+	padding-top:20px;
+}
+
+.app-c-topic-list--small .app-c-topic-list__item {
+    margin-bottom: 5px
+}
+
+.app-c-topic-list--small .app-c-topic-list__link {
+    font-family: "nta", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.1428571429
+}
+
+@media print {
+    .app-c-topic-list--small .app-c-topic-list__link {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .app-c-topic-list--small .app-c-topic-list__link {
+        font-size:16px;
+        line-height: 1.25
+    }
+}
+
+@media print {
+    .app-c-topic-list--small .app-c-topic-list__link {
+        font-size: 14pt;
+        line-height: 1.2
+    }
+}
+
+.app-c-topic-list--margin-bottom {
+    margin-bottom: 15px
+}
+
+@media (min-width: 40.0625em) {
+    .app-c-topic-list--margin-bottom {
+        margin-bottom:45px
+    }
+}
+
+.gem-c-govspeak {
+    color: #ffffff;
+    font-family: "nta", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.1428571429
+}
+
+@media print {
+    .gem-c-govspeak {
+        color: #fff
+    }
+}
+
+@media print {
+    .gem-c-govspeak {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-govspeak {
+        font-size:16px;
+        line-height: 1.25
+    }
+}
+
+@media print {
+    .gem-c-govspeak {
+        font-size: 14pt;
+        line-height: 1.2
+    }
+}
+
+.gem-c-govspeak ol,.gem-c-govspeak ul,.gem-c-govspeak p {
+    font-family: "nta", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    margin-top: 15px;
+    margin-bottom: 15px
+}
+
+@media print {
+    .gem-c-govspeak ol,.gem-c-govspeak ul,.gem-c-govspeak p {
+        font-family: sans-serif
+    }
+}
+
+
+//*** FOOTER ***//
+
+
+.footer-bottom {
+    border-top: 1px solid #bfc1c3;
+    padding-top: 20px;
+    text-align: center;
+	margin-bottom: 10px;
+}
+
+.footer-bottom a {
+    position: relative;
+    top: -4px;
+    display: inline-block;
+    width: 35px;
+    margin: 0 10px
+}
+
+.footer-bottom a:hover {
+    opacity: 0.8
+}
+
+.footer-bottom img {
+    width: 35px;
+    height: 35px
+}
+
+//**********  SEARCH *******//
+
+.gem-c-search {
+    position: relative;
+    margin-bottom: 30px
+}
+
+.gem-c-search__label {
+    font-family: "nta", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 2.5;
+    display: block
+}
+
+@media print {
+    .gem-c-search__label {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-search__label {
+        font-size:19px;
+        line-height: 2.1052631579
+    }
+}
+
+@media print {
+    .gem-c-search__label {
+        font-size: 14pt;
+        line-height: 40px
+    }
+}
+
+.gem-c-search__label h1 {
+    font-family: "nta", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 2.5;
+    margin: 0
+}
+
+@media print {
+    .gem-c-search__label h1 {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-search__label h1 {
+        font-size:19px;
+        line-height: 2.1052631579
+    }
+}
+
+@media print {
+    .gem-c-search__label h1 {
+        font-size: 14pt;
+        line-height: 40px
+    }
+}
+
+.js-enabled .gem-c-search__label {
+    position: absolute;
+    left: 15px;
+    top: 1px;
+    z-index: 1;
+    color: #626a6e
+}
+
+.js-enabled .gem-c-search--separate-label .gem-c-search__label {
+    color: #0b0c0c
+}
+
+.gem-c-search__input[type="search"] {
+    font-family: "nta", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4736842105;
+    padding: 6px;
+    margin: 0;
+    width: 100%;
+    height: 40px;
+    border: 2px solid #0b0c0c;
+    background: #ffffff;
+    border-radius: 0;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none
+}
+
+@media print {
+    .gem-c-search__input[type="search"] {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-search__input[type="search"] {
+        font-size:19px;
+        line-height: 1.4736842105
+    }
+}
+
+@media print {
+    .gem-c-search__input[type="search"] {
+        font-size: 14pt;
+        line-height: 1.4736842105
+    }
+}
+
+.gem-c-search__input[type="search"]:focus,.gem-c-search__input[type="search"].focus {
+    z-index: 2
+}
+
+.gem-c-search__input[type="search"]:focus {
+    outline: 3px solid #ffdd00;
+    outline-offset: 0;
+    box-shadow: inset 0 0 0 2px
+}
+
+.gem-c-search__submit {
+    border: 0;
+    cursor: pointer;
+    border-radius: 0;
+    position: relative;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    background-image: url(/public/images/icons/search-button.png);
+    background-repeat: no-repeat;
+    background-position: 2px 50%;
+    text-indent: -5000px;
+    overflow: hidden;
+	background-color: #0b0c0c;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    .gem-c-search__submit {
+        background-size:52.5px auto;
+        background-position: 115% 50%
+    }
+}
+
+.gem-c-search__submit:focus {
+    z-index: 2;
+    outline: 3px solid #ffdd00;
+    outline-offset: 0;
+    box-shadow: inset 0 0 0 4px #0b0c0c
+}
+
+.gem-c-search__submit::-moz-focus-inner {
+    border: 0
+}
+
+.gem-c-search__item-wrapper {
+    display: table;
+    width: 100%;
+    background: #ffffff
+}
+
+.gem-c-search__item {
+    position: relative;
+    display: table-cell;
+    vertical-align: top
+}
+
+.gem-c-search__submit-wrapper {
+    width: 1%
+}
+
+.gem-c-search--on-govuk-blue .gem-c-search__label {
+    color: #ffffff
+}
+
+.gem-c-search--on-govuk-blue .gem-c-search__input {
+    border-width: 0
+}
+
+.gem-c-search--on-govuk-blue .gem-c-search__input:focus {
+    box-shadow: none
+}
+
+
+.gem-c-search--on-govuk-blue .gem-c-search__submit {
+    background-color: #0b0c0c;
+    color: #ffffff
+}
+
+.gem-c-search--on-govuk-blue .gem-c-search__submit:hover {
+    background-color: #171919
+}
+
+.js-enabled .gem-c-search--on-govuk-blue .gem-c-search__label {
+    color: #626a6e
+}
+
+.gem-c-search--on-white .gem-c-search__submit {
+    background-color: #1d70b8;
+    color: #ffffff
+}
+
+.gem-c-search--on-white .gem-c-search__submit:hover {
+    background-color: #207dce
+}
+
+.gem-c-search--on-white .gem-c-search__input[type="search"] {
+    border-right-width: 0
+}
+
+.gem-c-search--on-white .gem-c-search__input[type="search"]:focus {
+    border-right-width: 2px
+}
+
+.gem-c-search--large .gem-c-search__label {
+    font-family: "nta", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 3.125
+}
+
+@media print {
+    .gem-c-search--large .gem-c-search__label {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-search--large .gem-c-search__label {
+        font-size:19px;
+        line-height: 2.6315789474
+    }
+}
+
+@media print {
+    .gem-c-search--large .gem-c-search__label {
+        font-size: 14pt;
+        line-height: 50px
+    }
+}
+
+.gem-c-search--large .gem-c-search__input[type="search"] {
+    height: 50px
+}
+
+.gem-c-search--large .gem-c-search__submit {
+    width: 50px;
+    height: 50px;
+    background-position: 8px 50%
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    .gem-c-search--large .gem-c-search__submit {
+        background-size:60px auto;
+        background-position: 160% 50%
+    }
+}
+
+.gem-c-search--separate-label .gem-c-search__label {
+    position: relative;
+    left: auto
+}
+
+// NCS Buttons 
+
+.button-white {
+  box-shadow: 0 1px 0 #0b0c0c;
+  border: #0b0c0c 1px solid;
+	background-color: #FFF;
+	color: #0b0c0c;
+	margin-bottom: 0;
+	&[disabled]{
+		background-color: #FFF;
+	}
+}
+
+.button-white:hover {
+	background-color: darken(#FFF, 5%);
+	color: #0b0c0c;
+	&[disabled]{
+		background-color: #FFF;
+	}
+}
+
+.align-center {
+	text-align: center;
+	
+}
+
+//COOKIES
+
+@import "patterns/cookies";
+@import "ncs-branding.scss";
