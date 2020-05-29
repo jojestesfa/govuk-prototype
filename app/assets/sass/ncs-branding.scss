@@ -221,7 +221,8 @@
     display: block;
     color: #fff
 }
-.primary-nav__child-link .govuk-link:visited, .primary-nav__list a:visited {
+.primary-nav__child-link .govuk-link:visited, .primary-nav__list a:visited,
+.govuk-link:link, a:link {
 	color:#fff;
 }
 
