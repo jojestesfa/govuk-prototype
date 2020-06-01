@@ -35,7 +35,9 @@ $govuk-assets-path: '/govuk/assets/';
 
 // NCS COMPONENTS
 
-
+html, body, button, input, table, td, th {
+	font-family : "nta", Arial, sans-serif;
+}
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
@@ -610,6 +612,559 @@ div,span,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code
     border-color: #9c132e
 }
 
+
+
+#global-header input[type=search]:focus {
+    outline: 3px solid #ffbf47;
+    outline-offset: -2px
+}
+
+#global-header h1 a:focus {
+    background-color: transparent;
+    outline: none
+}
+
+#global-header a:focus {
+    color: #0b0c0c
+}
+
+#global-header .header-wrapper:after,#global-header .header-wrapper .header-global:after,#global-header .header-wrapper .header-global .header-logo:after,#global-header .header-proposition #proposition-link:after,#global-header .header-proposition #proposition-links:after,#footer .footer-meta:after {
+    content: "";
+    display: block;
+    clear: both
+}
+
+#global-header {
+    background-color: #fff;
+    width: 100%
+}
+
+#global-header .header-wrapper {
+    background-color: #fff;
+    max-width: 990px;
+    margin: 0 auto;
+    padding-top: 8px;
+    padding-bottom: 8px
+}
+
+@media (min-width: 641px) {
+    #global-header .header-wrapper {
+        padding-left:15px;
+        padding-right: 15px
+    }
+}
+
+#global-header .header-wrapper .header-global .header-logo {
+    float: left
+}
+
+@media (min-width: 769px) {
+    #global-header .header-wrapper .header-global .header-logo {
+        width:43.33%
+    }
+}
+
+@media screen and (max-width: 379px) {
+    #global-header .header-wrapper .header-global .header-logo {
+        width:auto;
+        float: none
+    }
+}
+
+#global-header .header-wrapper .header-global .header-logo .content {
+    margin: 0 15px
+}
+
+#global-header .header-wrapper .header-global .header-logo {
+    margin-top: 2px
+}
+
+@media (min-width: 769px) {
+    #global-header.with-proposition .header-wrapper .header-global {
+        float:left;
+        width: 33.33%
+    }
+
+    #global-header.with-proposition .header-wrapper .header-global .header-logo,#global-header.with-proposition .header-wrapper .header-global .site-search {
+        width: 100%
+    }
+}
+
+@media (min-width: 769px) {
+    #global-header.with-proposition .header-wrapper .header-proposition {
+        width:66.66%;
+        float: left
+    }
+}
+
+#global-header.with-proposition .header-wrapper .header-proposition .content {
+    margin: 0 15px
+}
+
+#global-header #logo {
+    float: left;
+    overflow: visible;
+    color: #0b0c0c;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 1;
+    text-decoration: none;
+    text-rendering: optimizeLegibility;
+    border-bottom: 1px solid transparent;
+    background: url(https://www.gov.uk/assets/static/images/gov.uk_logotype_crown-ea874a79e09423d63420aff44f016fd0b92dc6dec0cc2668d63b150c8669875e.png) no-repeat;
+    background-size: 36px 32px;
+    background-position: 0 0
+}
+
+#global-header #logo img {
+    margin: 2px 1px 0 0;
+    vertical-align: bottom;
+    visibility: hidden
+}
+
+#global-header #logo:hover,#global-header #logo:focus {
+    text-decoration: none;
+    border-bottom-color: white
+}
+
+#global-header .header-proposition {
+    padding-top: 10px
+}
+
+@media (min-width: 769px) {
+    #global-header .header-proposition {
+        padding-top:0
+    }
+}
+
+#global-header .header-proposition #proposition-name {
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: bold;
+    color: white;
+    text-decoration: none
+}
+
+@media (min-width: 641px) {
+    #global-header .header-proposition #proposition-name {
+        font-size:24px;
+        line-height: 1.25
+    }
+}
+
+#global-header .header-proposition a#proposition-name:hover {
+    text-decoration: underline
+}
+
+#global-header .header-proposition a#proposition-name:focus {
+    color: #0b0c0c
+}
+
+#global-header .header-proposition a.menu {
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 14px;
+    line-height: 1.14286;
+    color: white;
+    display: block;
+    float: right;
+    text-decoration: none;
+    padding-top: 6px
+}
+
+@media (min-width: 641px) {
+    #global-header .header-proposition a.menu {
+        font-size:16px;
+        line-height: 1.25
+    }
+}
+
+@media (min-width: 769px) {
+    #global-header .header-proposition a.menu {
+        display:none
+    }
+}
+
+#global-header .header-proposition a.menu:hover {
+    text-decoration: underline
+}
+
+#global-header .header-proposition a.menu:after {
+    display: inline-block;
+    font-size: 8px;
+    height: 8px;
+    padding-left: 5px;
+    vertical-align: middle;
+    content: " \25BC"
+}
+
+#global-header .header-proposition a.menu.js-visible:after {
+    content: " \25B2"
+}
+
+#global-header .header-proposition #proposition-menu {
+    margin-top: 5px
+}
+
+@media (min-width: 769px) {
+    #global-header .header-proposition #proposition-menu.no-proposition-name {
+        margin-top:37px
+    }
+}
+
+#global-header .header-proposition #proposition-link,#global-header .header-proposition #proposition-links {
+    clear: both;
+    margin: 2px 0 0 0;
+    padding: 0
+}
+
+.js-enabled #global-header .header-proposition #proposition-link,.js-enabled #global-header .header-proposition #proposition-links {
+    display: none
+}
+
+@media (min-width: 769px) {
+    .js-enabled #global-header .header-proposition #proposition-link,.js-enabled #global-header .header-proposition #proposition-links {
+        display:block
+    }
+}
+
+.js-enabled #global-header .header-proposition #proposition-link.js-visible,.js-enabled #global-header .header-proposition #proposition-links.js-visible {
+    display: block
+}
+
+#global-header .header-proposition #proposition-link li,#global-header .header-proposition #proposition-links li {
+    float: left;
+    width: 50%;
+    padding: 3px 0;
+    border-bottom: 1px solid #2e3133
+}
+
+@media (min-width: 769px) {
+    #global-header .header-proposition #proposition-link li,#global-header .header-proposition #proposition-links li {
+        display:block;
+        width: auto;
+        padding: 0 15px 0 0;
+        border-bottom: 0
+    }
+
+    #global-header .header-proposition #proposition-link li.clear-child,#global-header .header-proposition #proposition-links li.clear-child {
+        clear: left
+    }
+}
+
+#global-header .header-proposition #proposition-link a,#global-header .header-proposition #proposition-links a {
+    color: white;
+    text-decoration: none;
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 700;
+    text-transform: none;
+    font-size: 12px;
+    line-height: 1.25
+}
+
+@media (min-width: 641px) {
+    #global-header .header-proposition #proposition-link a,#global-header .header-proposition #proposition-links a {
+        font-size:14px;
+        line-height: 1.42857
+    }
+}
+
+@media (min-width: 769px) {
+    #global-header .header-proposition #proposition-link a,#global-header .header-proposition #proposition-links a {
+        font-family:"nta", Arial, sans-serif;
+        font-weight: 700;
+        text-transform: none;
+        font-size: 14px;
+        line-height: 1.14286;
+        line-height: 23px
+    }
+}
+
+@media (min-width: 769px) and (min-width: 641px) {
+    #global-header .header-proposition #proposition-link a,#global-header .header-proposition #proposition-links a {
+        font-size:16px;
+        line-height: 1.25
+    }
+}
+
+#global-header .header-proposition #proposition-link a:hover,#global-header .header-proposition #proposition-links a:hover {
+    text-decoration: underline
+}
+
+#global-header .header-proposition #proposition-link a.active,#global-header .header-proposition #proposition-links a.active {
+    color: #1d8feb
+}
+
+#global-header .header-proposition #proposition-link a:focus,#global-header .header-proposition #proposition-links a:focus {
+    color: #0b0c0c
+}
+
+#global-header .header-proposition #proposition-link {
+    float: right;
+    line-height: 22px
+}
+
+.js-enabled #global-header .header-proposition #proposition-link {
+    display: block
+}
+
+@media (min-width: 769px) {
+    #global-header .header-proposition #proposition-link {
+        float:none
+    }
+}
+
+#global-header-bar {
+    height: 10px;
+    background-color: #005ea5
+}
+
+
+#global-header .header-wrapper .header-global .site-search {
+    width: 49%;
+    float: right
+}
+
+@media (min-width: 48.0625em) {
+    #global-header .header-wrapper .header-global .site-search {
+        width:33.33%
+    }
+}
+
+@media screen and (max-width: 379px) {
+    #global-header .header-wrapper .header-global .site-search {
+        width:auto;
+        float: none
+    }
+}
+
+#global-header .header-wrapper .header-global .site-search .content {
+    margin: 0 15px
+}
+
+#global-header.with-proposition #search {
+    margin-top: 4px
+}
+
+#global-header .search-toggle {
+    display: none
+}
+
+@media screen and (max-width: 379px) {
+    #global-header .search-toggle {
+        background-color:#1d70b8;
+        background-image: url(https://www.gov.uk/assets/static/search-button-ca89b2a79f944909ceb7370d3f0b78811d32b96e883348fcd8886f63dd619585.png);
+        background-position: 0 50%;
+        background-repeat: no-repeat;
+        display: block;
+        float: right;
+        height: 30px;
+        margin: -32px 15px;
+        overflow: hidden;
+        padding: 0;
+        text-indent: -5000px;
+        width: 36px
+    }
+
+    #global-header .search-toggle:focus {
+        border-width: 0;
+        box-shadow: inset 0 0 0 4px #0b0c0c;
+        outline: 3px solid #ffdd00;
+        outline-offset: 0
+    }
+
+    body.search #global-header .search-toggle {
+        display: none
+    }
+}
+
+@media only screen and (max-width: 379px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 379px) and (min--moz-device-pixel-ratio: 2), only screen and (max-width: 379px) and (-o-min-device-pixel-ratio: 20 / 10), only screen and (max-width: 379px) and (min-device-pixel-ratio: 2), only screen and (max-width: 379px) and (min-resolution: 192dpi), only screen and (max-width: 379px) and (min-resolution: 2dppx) {
+    #global-header .search-toggle {
+        background-size:52.5px 35px;
+        background-position: 100% 50%
+    }
+}
+
+#global-header .search-toggle:hover {
+    background-color: #1a63a2
+}
+
+#global-header .search-toggle.js-hidden {
+    display: none
+}
+
+#global-header form#search .content {
+    position: relative;
+    background: #ffffff
+}
+
+#global-header form#search label {
+    float: left;
+    min-height: 36px;
+    line-height: 35px;
+    text-indent: 15px;
+    overflow: hidden;
+    display: block;
+    margin-right: 10px
+}
+
+.js-enabled #global-header form#search label {
+    float: none;
+    position: absolute;
+    left: 0;
+    top: 1px;
+    z-index: 1;
+    width: 100%;
+    margin-right: 0
+}
+
+#global-header form#search input {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    min-width: 0;
+    display: block;
+    margin: 0;
+    border: 0;
+    min-height: 36px;
+    padding: 6px 0;
+    -webkit-appearance: none;
+    -moz-appearance: none
+}
+
+#global-header form#search input::-moz-focus-inner {
+    border: 0
+}
+
+#global-header form#search input#site-search-text {
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 14px;
+    line-height: 1.7692307692;
+    background: transparent;
+    height: 36px;
+    padding: 6px;
+    position: relative;
+    z-index: 3;
+	border:2px solid #0b0c0c;
+}
+
+@media (min-width: 641px) {
+    #global-header form#search input#site-search-text {
+        font-size:16px;
+        line-height: 1.4375
+    }
+}
+
+#global-header form#search input#site-search-text.focus,#global-header form#search input#site-search-text:focus {
+    background: #ffffff;
+    outline: 3px solid #ffdd00;
+    outline-offset: 0;
+    z-index: 5
+}
+
+.js-enabled #global-header form#search input#site-search-text {
+    width: 86%;
+    width: -webkit-calc(100% - 35.1px);
+    width: calc(100% - 35.1px)
+}
+
+#global-header form#search input.submit {
+    position: absolute;
+    z-index: 4;
+    right: 0;
+    top: 0;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #1d70b8;
+    border-width: 0 0 0 1px;
+    border-left-color: #222;
+    border-radius: 0;
+    overflow: hidden;
+    text-indent: -5000px;
+    color: #ffffff;
+    background-color: #e1007d;
+    background-image: url(https://www.gov.uk/assets/static/search-button-ca89b2a79f944909ceb7370d3f0b78811d32b96e883348fcd8886f63dd619585.png);
+    background-repeat: no-repeat;
+    background-position: 0 50%
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    #global-header form#search input.submit {
+        background-size:52.5px 35px;
+        background-position: 100% 50%
+    }
+}
+
+#global-header form#search input.submit:hover {
+    background-color: #e1007d
+}
+
+#global-header form#search input.submit.focus,#global-header form#search input.submit:focus {
+    border-width: 0;
+    box-shadow: inset 0 0 0 4px #0b0c0c;
+    outline: 3px solid #ffdd00;
+    outline-offset: 0
+}
+
+@media screen and (max-width: 379px) {
+    #global-header form#search {
+        display:none;
+        width: 100%
+    }
+
+    #global-header form#search #site-search-text {
+        width: 80%
+    }
+}
+
+#global-header form#search.js-visible {
+    display: block
+}
+
+#global-header .header-proposition a.menu {
+    padding-bottom: 4px
+}
+
+#global-header #proposition-links {
+    list-style: none
+}
+
+#global-header #proposition-links li:last-child {
+    border-bottom: 0;
+    width: 100%
+}
+
+@media (min-width: 40.0625em) {
+    #global-header #proposition-links li:last-child {
+        width:auto
+    }
+}
+
+#global-header #proposition-links a:focus,#global-header .header-proposition a:focus {
+    background-color: #ffdd00;
+    border-color: #ffdd00;
+    box-shadow: 0 -2px #ffdd00, 0 4px #0b0c0c;
+    color: #0b0c0c;
+    outline: 3px solid transparent;
+    text-decoration: none
+}
+
+/* GLOBAL HEADER ENDS */
+
+
+
+
+
+
+
 .govuk-header {
 	background: none;
 	
@@ -648,13 +1203,6 @@ div,span,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code
     padding-bottom: 12px
 }
 
-
-
-
-
-
-
-
 .govuk-main-wrapper--auto-spacing:first-child {
 	padding-top: 10px;
 }
@@ -662,9 +1210,11 @@ div,span,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code
 	margin:0;
 }
 .ncs-masthead-container .ncs-masthead {
-    padding: 10px;
+
     color: #fff;
     background-color: #A50B67;
+	border: 5px solid #e4028c;
+	overflow:hidden;
 	
 	.govuk-select {
 		margin-bottom: 10px;
@@ -1396,7 +1946,7 @@ div,span,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code
     background-position: 2px 50%;
     text-indent: -5000px;
     overflow: hidden;
-	background-color: #0b0c0c;
+	background-color: #e1007d;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
@@ -1526,6 +2076,154 @@ div,span,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code
     position: relative;
     left: auto
 }
+
+//List
+
+.gem-c-share-links__list {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.gem-c-share-links__list-item {
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    min-height: 32px;
+    padding-left: 42px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 32px
+}
+
+.gem-c-share-links__link {
+    font-family: "nta", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.1428571429;
+    margin-right: 30px;
+    text-decoration: none
+}
+
+@media print {
+    .gem-c-share-links__link {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-share-links__link {
+        font-size:16px;
+        line-height: 1.25
+    }
+}
+
+@media print {
+    .gem-c-share-links__link {
+        font-size: 14pt;
+        line-height: 1.2
+    }
+}
+
+.gem-c-share-links__link:focus,.gem-c-share-links__link:active:focus,.gem-c-share-links__link:link:focus,.gem-c-share-links__link:visited:focus {
+    outline: 3px solid transparent;
+    color: #0b0c0c;
+    background-color: #ffdd00;
+    box-shadow: 0 -2px #ffdd00, 0 4px #0b0c0c;
+    text-decoration: none;
+    color: #0b0c0c !important
+}
+
+.gem-c-share-links__title {
+    color: #0b0c0c;
+    font-family: "nta", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0 0 10px 0
+}
+
+@media print {
+    .gem-c-share-links__title {
+        color: #000000
+    }
+}
+
+@media print {
+    .gem-c-share-links__title {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-share-links__title {
+        font-size:16px;
+        line-height: 1.5
+    }
+}
+
+@media print {
+    .gem-c-share-links__title {
+        font-size: 14pt;
+        line-height: 1.5
+    }
+}
+
+.gem-c-share-links__link-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    vertical-align: top
+}
+
+.direction-rtl .gem-c-share-links__link {
+    display: inline-block;
+    margin-right: 0;
+    margin-left: 30px
+}
+
+.direction-rtl .gem-c-share-links__list-item {
+    padding-left: 10px;
+    padding-right: 42px
+}
+
+.direction-rtl .gem-c-share-links__link-icon {
+    left: auto;
+    right: 0
+}
+
+.gem-c-share-links--columns .gem-c-share-links__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr))
+}
+
+.gem-c-share-links--columns .gem-c-share-links__list:after {
+    content: "";
+    display: block;
+    clear: both
+}
+
+.gem-c-share-links--columns .gem-c-share-links__list-item {
+    float: left;
+    min-width: 150px
+}
+
+.gem-c-share-links--columns .gem-c-share-links__link {
+    margin: 0
+}
+
+.gem-c-share-links--stacked .gem-c-share-links__list-item {
+    display: block
+}
+
+
 
 // NCS Buttons 
 

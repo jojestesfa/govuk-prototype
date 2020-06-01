@@ -9,11 +9,11 @@
 }
 
 .brand--national-careers-service .brand__color:link,.brand--national-careers-service .brand__color:visited,.brand--national-careers-service .brand__color:active {
-    color: #A50B67;
+    color: #A50B67;text-decoration: none;
 }
 
 .brand--national-careers-service .brand__color:hover,.brand--national-careers-service .brand__color:focus {
-    color: #A50B67;
+    color: #A50B67; text-decoration: underline;
 }
 
 
@@ -210,7 +210,8 @@
 .primary-nav__child-item,.nav__top-level-duplicate {
     display: block;
     margin: 0;
-    padding: 0
+    padding: 0;
+	min-width:200px;
 }
 
 .primary-nav__child-item--active {
@@ -236,7 +237,7 @@
 
 @media (min-width: 768px) {
     .primary-nav__child-link,.nav__top-level-duplicate>a {
-        padding:10px 5px 5px 16px;
+        padding:10px 15px 5px 16px;
 		color: #fff;
     }
 

@@ -4,7 +4,7 @@ Error: File to import not found or unreadable: lib/extensions/extensions.
          C:/Program Files/Adobe/Adobe Dreamweaver CC 2019/Configuration/SassFrameworks/bourbon
          C:/Program Files/Adobe/Adobe Dreamweaver CC 2019/Configuration/SassFrameworks/neat
          C:/Program Files/Adobe/Adobe Dreamweaver CC 2019/Configuration/SassFrameworks/base
-        on line 8 of D:\__UI\DfE\NATIONAL CAREER SERVICE\DSD\PROTOTYPE - MOJ\app\assets\sass\application.scss
+        on line 8 of D:\__UI\DfE\NATIONAL CAREER SERVICE\DSD\DSD\DSD-Prototype\app\assets\sass\application.scss
 
 3: 
 4: // We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework.
@@ -19,7 +19,7 @@ Error: File to import not found or unreadable: lib/extensions/extensions.
 13: @import 'node_modules/govuk_frontend_toolkit/stylesheets/typography.scss';
 
 Backtrace:
-D:\__UI\DfE\NATIONAL CAREER SERVICE\DSD\PROTOTYPE - MOJ\app\assets\sass\application.scss:8
+D:\__UI\DfE\NATIONAL CAREER SERVICE\DSD\DSD\DSD-Prototype\app\assets\sass\application.scss:8
 C:/Program Files/Adobe/Adobe Dreamweaver CC 2019/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/import_node.rb:67:in `rescue in import'
 C:/Program Files/Adobe/Adobe Dreamweaver CC 2019/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/import_node.rb:45:in `import'
 C:/Program Files/Adobe/Adobe Dreamweaver CC 2019/ruby/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/import_node.rb:28:in `imported_file'
@@ -56,4 +56,4 @@ C:/Program Files/Adobe/Adobe Dreamweaver CC 2019/ruby/bin/sass:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: lib/extensions/extensions.\A        Load paths:\A          C:/Program Files/Adobe/Adobe Dreamweaver CC 2019/Configuration/SassFrameworks/bourbon\A          C:/Program Files/Adobe/Adobe Dreamweaver CC 2019/Configuration/SassFrameworks/neat\A          C:/Program Files/Adobe/Adobe Dreamweaver CC 2019/Configuration/SassFrameworks/base\A         on line 8 of D:\__UI\DfE\NATIONAL CAREER SERVICE\DSD\PROTOTYPE - MOJ\app\assets\sass\application.scss\A \A 3: \A 4: // We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework.\A 5: $govuk-assets-path: '/govuk/assets/';\A 6: \A 7: // Import GOV.UK Frontend and any extension styles if extensions have been configured\A 8: @import \"lib/extensions/extensions\";\A 9: @import \"components/colors\";\A 10: @import 'node_modules/govuk_frontend_toolkit/stylesheets/colours/palette.scss';\A 11: @import 'node_modules/govuk_frontend_toolkit/stylesheets/conditionals.scss';\A 12: @import 'node_modules/govuk_frontend_toolkit/stylesheets/grid_layout.scss';\A 13: @import 'node_modules/govuk_frontend_toolkit/stylesheets/typography.scss';"; }
+  content: "Error: File to import not found or unreadable: lib/extensions/extensions.\A        Load paths:\A          C:/Program Files/Adobe/Adobe Dreamweaver CC 2019/Configuration/SassFrameworks/bourbon\A          C:/Program Files/Adobe/Adobe Dreamweaver CC 2019/Configuration/SassFrameworks/neat\A          C:/Program Files/Adobe/Adobe Dreamweaver CC 2019/Configuration/SassFrameworks/base\A         on line 8 of D:\__UI\DfE\NATIONAL CAREER SERVICE\DSD\DSD\DSD-Prototype\app\assets\sass\application.scss\A \A 3: \A 4: // We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework.\A 5: $govuk-assets-path: '/govuk/assets/';\A 6: \A 7: // Import GOV.UK Frontend and any extension styles if extensions have been configured\A 8: @import \"lib/extensions/extensions\";\A 9: @import \"components/colors\";\A 10: @import 'node_modules/govuk_frontend_toolkit/stylesheets/colours/palette.scss';\A 11: @import 'node_modules/govuk_frontend_toolkit/stylesheets/conditionals.scss';\A 12: @import 'node_modules/govuk_frontend_toolkit/stylesheets/grid_layout.scss';\A 13: @import 'node_modules/govuk_frontend_toolkit/stylesheets/typography.scss';"; }
