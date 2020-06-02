@@ -16,6 +16,35 @@
     color: #A50B67; text-decoration: underline;
 }
 
+//LAYOUT
+@media (max-width: 505px) {
+    .govuk-grid-column-one-third {
+        margin-top:20px;
+		margin-bottom:20px;
+    }
+}
+
+#your-next-steps { 
+	.your-next-steps-form { 
+		margin-top:10px;
+		span.next-line {
+			width:auto;
+			float:left;
+			margin-bottom: 0;
+		}
+	}
+}
+@media (max-width: 31.250em) {
+	#your-next-steps { 
+		.your-next-steps-form { 
+			span {
+				display: block;
+				margin:0;
+			}
+		}
+	}
+	
+}
 
 //HEADER
 
@@ -25,7 +54,14 @@
 
 
 //NAIGATION
-
+#primary-nav {
+	background: #A50B67;
+}
+@media (max-width: 505px) {
+    #primary-nav {
+        margin-bottom:20px;
+    }
+}
 .primary-nav {
     background-color: #A50B67;
     position: relative
@@ -363,11 +399,27 @@
 }
 
 
+//FEATURED
+
+iframe#featured-banner {
+	
+}
+@media (max-width: 505px) {
+    iframe#featured-banner {
+		max-width:100%;
+	}
+}
 //MISC
 
 .no-padding-left {padding-left: 0;}
 .overflow-hidden {overflow:hidden;}
 .user-quote span {font-size:200%}
+
+
+
+
+
+
 // GEM-C HEADING
 
 .gem-c-heading {

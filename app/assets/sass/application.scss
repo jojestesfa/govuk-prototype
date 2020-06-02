@@ -942,6 +942,14 @@ div,span,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code
     }
 }
 
+@media screen and (max-width: 505px) {
+    #global-header .header-wrapper .header-global .site-search {
+        width:93%;
+        float: left;
+		margin-top:20px;
+    }
+}
+
 #global-header .header-wrapper .header-global .site-search .content {
     margin: 0 15px
 }
@@ -1213,7 +1221,7 @@ div,span,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code
 
     color: #fff;
     background-color: #A50B67;
-	border: 5px solid #e4028c;
+	border: 8px solid #e4028c;
 	overflow:hidden;
 	
 	.govuk-select {
@@ -1474,7 +1482,10 @@ div,span,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code
 @media (min-width: 20em) and (max-width: 40.0525em) and (min-width: 20em) {
     .gem-c-image-card__image-wrapper {
         width:33.3333%;
-        float: left
+        float: left;
+    }
+	#your-next-steps .gem-c-image-card__image-wrapper {
+		display: none;
     }
 }
 
@@ -1681,6 +1692,11 @@ div,span,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code
 
 .app-c-topic-list--small .app-c-topic-list__item {
     margin-bottom: 5px
+}
+@media (max-width: 31.250em) {
+    .app-c-topic-list--small .app-c-topic-list__item  {
+    	padding: 5px 0;
+	}
 }
 
 .app-c-topic-list--small .app-c-topic-list__link {
