@@ -4,6 +4,11 @@
 	background-color: #eaebee;
 }
 
+@media (max-width: 31.250em) {
+	.colour-selector.section--brand-grey {
+		background-color: #fff;
+	}
+}
 .brand--national-careers-service .brand__color {
     color: #A50B67;
 }
@@ -54,13 +59,23 @@
 
 
 //NAIGATION
+
+
+
 #primary-nav {
 	background: #A50B67;
 }
 @media (max-width: 505px) {
     #primary-nav {
         margin-bottom:20px;
+		overflow:hidden; 
+		margin:0 15px;
+		padding: 3px 0;
     }
+	.govuk-header__menu-button {
+		top: 8px;
+		left: 0;
+	}
 }
 .primary-nav {
     background-color: #A50B67;
@@ -338,14 +353,26 @@
 }
 
 .nav--controls__menu {
-    background-color: #414042;
     font-size: 17px;
     float: left;
     width: 50%;
     padding: 16px 16px;
     color: #E5E6E7;
-    border-right: 1px solid #e1007d
 }
+
+@media (max-width: 505px) {
+    .nav--controls__menu {
+		font-size: 17px;
+		float: left;
+		width: 50%;
+		padding: 16px 16px;
+		color: #E5E6E7;
+
+	}
+}
+
+
+
 
 .nav--controls__no-search {
     width: 100%
@@ -399,14 +426,17 @@
 }
 
 
-//FEATURED
-
 iframe#featured-banner {
 	
 }
 @media (max-width: 505px) {
     iframe#featured-banner {
 		max-width:100%;
+	}
+	.section-featured {
+		li.app-c-topic-list__item {
+			margin-bottom:12px;
+		}
 	}
 }
 //MISC
