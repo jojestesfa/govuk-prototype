@@ -998,7 +998,7 @@ div,span,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code
 @media only screen and (max-width: 379px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 379px) and (min--moz-device-pixel-ratio: 2), only screen and (max-width: 379px) and (-o-min-device-pixel-ratio: 20 / 10), only screen and (max-width: 379px) and (min-device-pixel-ratio: 2), only screen and (max-width: 379px) and (min-resolution: 192dpi), only screen and (max-width: 379px) and (min-resolution: 2dppx) {
     #global-header .search-toggle {
         background-size:52.5px 35px;
-        background-position: 100% 50%
+        background-position: 100% 50%; display:none;
     }
 }
 
@@ -1129,7 +1129,7 @@ div,span,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code
 
 @media screen and (max-width: 379px) {
     #global-header form#search {
-        display:none;
+        display:block;
         width: 100%
     }
 
