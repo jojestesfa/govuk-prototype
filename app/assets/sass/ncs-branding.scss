@@ -78,18 +78,11 @@ $ncs-link-hover-colour:#A50B67;
   &:hover,
   &:active,
   &:focus {
-    @include $ncs-link-active-colour;
+    color: $ncs-link-active-colour;
 	  text-decoration: underline;
   }
 
-  // alphagov/govuk_template includes a specific a:link:focus selector designed
-  // to make unvisited links a slightly darker blue when focussed, so we need to
-  // override the text colour for that combination of selectors.
-  @include govuk-compatibility(govuk_template) {
-    &:link:focus {
-      @include $ncs-link-active-colour;
-    }
-  }
+  
 }
 // NCS Buttons 
 
