@@ -12,11 +12,14 @@ a {text-decoration: none !important;}
 	background-color: #eaebee;
 }
 
-@media (max-width: 31.250em) {
+@media (max-width: 505px) {
 	.colour-selector.section--brand-grey {
 		background-color: #fff;
 	}
+	.govuk-\!-padding-2 {padding:0 !important; padding-bottom:10px !important;}
+	.govuk-grid-column-one-half {padding:0}
 }
+.govuk-\!-padding-2 {padding-top:0 !important}
 .brand--national-careers-service .brand__color {
     color: #A50B67;
 }
@@ -548,11 +551,7 @@ iframe#featured-banner {
     iframe#featured-banner {
 		max-width:100%;
 	}
-	.section-featured {
-		li.app-c-topic-list__item {
-			margin-bottom:12px;
-		}
-	}
+	
 }
 //MISC
 

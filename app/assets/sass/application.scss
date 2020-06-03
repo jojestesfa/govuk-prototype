@@ -39,9 +39,6 @@ html, body, button, input, table, td, th {
 	font-family : "nta", Arial, sans-serif;
 }
 
-
-
-
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
 $site-width:960px;
@@ -1478,13 +1475,13 @@ div,span,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code
 
 @media (min-width: 20em) and (max-width: 40.0525em) {
     .gem-c-image-card {
-        margin:0 -15px 30px -15px
+        margin:0
     }
 
     .gem-c-image-card__image-wrapper {
         box-sizing: border-box;
         width: 100%;
-        padding: 0 15px
+        padding: 0;
     }
 }
 
@@ -2254,6 +2251,8 @@ div,span,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code
 	text-align: center;
 	
 }
+
+
 
 //COOKIES
 
