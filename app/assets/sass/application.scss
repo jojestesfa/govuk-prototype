@@ -43,6 +43,11 @@ html, body, button, input, table, td, th {
 
 $site-width:960px;
 
+$ncs-link-colour: #A50B67;
+$ncs-link-visited-colour: #A50B67;
+$ncs-focus-text-colour:#A50B67;
+$ncs-link-active-colour:#A50B67; 
+$ncs-link-hover-colour:#A50B67;
 // Change to header to change colour of blue border underneath header.
 .govuk-header__container {
   border-bottom: 10px solid #207e77;
@@ -1241,6 +1246,7 @@ div,span,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code
 .gem-c-image-card__image {
     display: block;
     max-width: 100%;
+	min-width: 100%;
 }
 
 
@@ -2240,27 +2246,6 @@ div,span,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code
 }
 
 
-
-// NCS Buttons 
-
-.button-white {
-  box-shadow: 0 1px 0 #0b0c0c;
-  border: #0b0c0c 1px solid;
-	background-color: #FFF;
-	color: #0b0c0c;
-	margin-bottom: 0;
-	&[disabled]{
-		background-color: #FFF;
-	}
-}
-
-.button-white:hover {
-	background-color: darken(#FFF, 5%);
-	color: #0b0c0c;
-	&[disabled]{
-		background-color: #FFF;
-	}
-}
 
 .align-center {
 	text-align: center;
