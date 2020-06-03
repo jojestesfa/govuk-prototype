@@ -5,7 +5,7 @@ $ncs-focus-text-colour:#A50B67;
 $ncs-link-active-colour:#A50B67; 
 $ncs-link-hover-colour:#A50B67;
 
-a {text-decoration: none !important;}
+
 // BRAND
 
 .colour-selector.section--brand-grey {
@@ -31,47 +31,10 @@ a {text-decoration: none !important;}
 .brand--national-careers-service .brand__color:hover,.brand--national-careers-service .brand__color:focus {
     color: #A50B67; text-decoration: underline;
 }
-
-
-// NCS Buttons 
-
-.govuk-button {
-	background-color: #a50b67;
-	color:#fff;
-	
-	&:hover {
-		background-color: #e1007d;
-	}
-}
-a.govuk-link.govuk-button:link,
-a.govuk-link.govuk-button:visited {
-	color:#fff;
-}
-
-.button-white {
-	box-shadow: 0 1px 0 #0b0c0c;
-  	border: #0b0c0c 1px solid;
-  	background-color: #FFF;
-	color: #0b0c0c;
-	margin-bottom: 0;
-	
-	&[disabled]{
-		background-color: #FFF;
-	}
-	
-	&:hover {
-		background-color: darken(#FFF, 5%);
-		color: #0b0c0c;
-	
-		&[disabled] {
-			background-color: #FFF;
-		}
-	}
-}
-
 //LINKS 
 .govuk-link:link, a:link {
     color: $ncs-link-colour;
+	text-decoration: underline;
   }
 .govuk-link:visited, a:visited {
     color: $ncs-link-visited-colour;
@@ -108,6 +71,94 @@ a.govuk-link.govuk-button:visited {
     }
   }
 }
+@mixin govuk-link-style-text {
+  // Override link colour to use text colour
+  &:link,
+  &:visited,
+  &:hover,
+  &:active,
+  &:focus {
+    @include $ncs-link-active-colour;
+	  text-decoration: underline;
+  }
+
+  // alphagov/govuk_template includes a specific a:link:focus selector designed
+  // to make unvisited links a slightly darker blue when focussed, so we need to
+  // override the text colour for that combination of selectors.
+  @include govuk-compatibility(govuk_template) {
+    &:link:focus {
+      @include $ncs-link-active-colour;
+    }
+  }
+}
+// NCS Buttons 
+
+.govuk-button {
+	background-color: #a50b67;
+	color:#fff;
+	
+	&:hover {
+		background-color: #e1007d;
+	}
+}
+a.govuk-link.govuk-button:link,
+a.govuk-link.govuk-button:visited {
+	color:#fff;
+}
+
+.button-white {
+	box-shadow: 0 1px 0 #0b0c0c;
+  	border: #0b0c0c 1px solid;
+  	background-color: #FFF;
+	color: #0b0c0c;
+	margin-bottom: 0;
+	
+	&[disabled]{
+		background-color: #FFF;
+	}
+	
+	&:hover {
+		background-color: darken(#FFF, 5%);
+		color: #0b0c0c;
+	
+		&[disabled] {
+			background-color: #FFF;
+		}
+	}
+}
+
+.govuk-button {
+    // Ensure that any global link styles are overridden
+    &:link,
+    &:visited,
+    &:active,
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+//Step by step links
+
+.app-step-nav__button--controls {
+  &:hover:not(:focus) {
+    color: $ncs-link-hover-colour;
+  }
+
+}
+.app-step-nav__button--title {
+  color: $ncs-link-hover-colour;
+}
+.app-step-nav__header:hover .app-step-nav__button:not(:focus) {
+  color: $ncs-link-hover-colour;
+}
+.app-step-nav__toggle-link {
+  color: $ncs-link-colour;
+}
+.app-step-nav__button {
+  color: $ncs-link-colour;
+}
+
+
 
 //LAYOUT
 @media (max-width: 505px) {
@@ -380,7 +431,7 @@ a.govuk-link.govuk-button:visited {
 }
 #primary-nav .primary-nav__child-link .govuk-link:visited, #primary-nav .primary-nav__list a:visited,
 #primary-nav .primary-nav__child-link .govuk-link:link, #primary-nav .primary-nav__child-link a:link,
-#primary-nav .govuk-link:visited, #primary-nav a:visited, #primary-nav .govuk-link:link, #primary-nav a:link, a:-webkit-any-link  {
+#primary-nav .govuk-link:visited, #primary-nav a:visited, #primary-nav .govuk-link:link, #primary-nav a:link  {
 	color:#fff; text-decoration: none;
 } 
 
@@ -559,9 +610,12 @@ iframe#featured-banner {
 .overflow-hidden {overflow:hidden;}
 .user-quote span {font-size:200%}
 
-
-
-
+#twitter-widget-0 {
+    border-radius: 0;
+    max-height: 350px !important;
+    overflow: hidden;
+    overflow-y: auto;
+}
 
 
 // GEM-C HEADING
