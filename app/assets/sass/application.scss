@@ -1264,9 +1264,14 @@ div,span,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code
 .gem-c-image-card__image {
     display: block;
     max-width: 100%;
+	min-width: 100%;
 }
 
-
+#get-help-local {
+	.gem-c-image-card__image {
+		min-width: auto;
+	}
+}
 .gem-c-heading {
     color: #0b0c0c;
     font-family: "nta", Arial, sans-serif;
