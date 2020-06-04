@@ -601,7 +601,8 @@ iframe#featured-banner {
 
 .no-padding-left {padding-left: 0;}
 .overflow-hidden {overflow:hidden;}
-.user-quote span {font-size:200%}
+.user-quote span {font-size:110%}
+.user-quote span.user-quote-icon-right {position:absolute}
 
 /*#twitter-widget-0 {
     border-radius: 0;
