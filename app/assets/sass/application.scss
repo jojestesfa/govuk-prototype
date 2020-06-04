@@ -663,13 +663,8 @@ div,span,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code
     float: left
 }
 
-@media (min-width: 769px) {
-    #global-header .header-wrapper .header-global .header-logo {
-        width:43.33%
-    }
-}
 
-@media screen and (max-width: 379px) {
+@media screen and (max-width: 505px) {
     #global-header .header-wrapper .header-global .header-logo {
         width:auto;
         float: none
@@ -681,7 +676,7 @@ div,span,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code
 }
 
 #global-header .header-wrapper .header-global .header-logo {
-    margin-top: 2px
+    margin-top: 27px;
 }
 
 @media (min-width: 769px) {
@@ -711,7 +706,7 @@ div,span,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code
     overflow: visible;
     color: #0b0c0c;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 26px;
     line-height: 1;
     text-decoration: none;
     text-rendering: optimizeLegibility;
@@ -719,6 +714,12 @@ div,span,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code
     background: url(https://www.gov.uk/assets/static/images/gov.uk_logotype_crown-ea874a79e09423d63420aff44f016fd0b92dc6dec0cc2668d63b150c8669875e.png) no-repeat;
     background-size: 36px 32px;
     background-position: 0 0
+}
+
+@media (max-width: 505px) {
+    #global-header #logo {
+		font-size: 25px;
+	}
 }
 
 #global-header #logo img {
@@ -928,7 +929,24 @@ div,span,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code
     background-color: #005ea5
 }
 
+#global-header .login-links {
+	text-align: right;
+	margin-bottom:10px;
+	
+	span {margin-left:20px}
+}
 
+@media screen and (max-width: 505px) {
+    #global-header .login-links {
+	text-align: right;
+	margin-bottom:0px;
+	
+	span {
+		margin-left:20px; display:block; text-align: left; margin:15px;
+		}
+}
+
+}
 #global-header .header-wrapper .header-global .site-search {
     width: 49%;
     float: right
@@ -936,11 +954,11 @@ div,span,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code
 
 @media (min-width: 48.0625em) {
     #global-header .header-wrapper .header-global .site-search {
-        width:33.33%
+        width:80%
     }
 }
 
-@media screen and (max-width: 379px) {
+@media screen and (max-width: 505px) {
     #global-header .header-wrapper .header-global .site-search {
         width:auto;
         float: none
@@ -955,9 +973,7 @@ div,span,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code
     }
 }
 
-#global-header .header-wrapper .header-global .site-search .content {
-    margin: 0 15px
-}
+
 
 #global-header.with-proposition #search {
     margin-top: 4px
@@ -1127,10 +1143,11 @@ div,span,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code
     outline-offset: 0
 }
 
-@media screen and (max-width: 379px) {
+@media screen and (max-width: 505px) {
     #global-header form#search {
         display:block;
-        width: 100%
+        width: 91%;
+		margin: 0 auto; float:none;
     }
 
     #global-header form#search #site-search-text {
@@ -1212,7 +1229,7 @@ div,span,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code
 #global-header .header-wrapper {
     max-width: 990px;
     margin: 0 auto;
-    padding-top: 32px;
+    padding-top: 10px;
     padding-bottom: 12px
 }
 
