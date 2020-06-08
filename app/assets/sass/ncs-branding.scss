@@ -8,7 +8,8 @@
  .ncs-main-banner {
 	  background: url("/public/images/ncs_main_banner.png") no-repeat right top;
 	  height:193px;
-	  border: 5px solid #ee1094; overflow: hidden;
+	  border: 9px solid #ee1094; 
+	  overflow: hidden;
 	 
 	 .banner-title {
 		border-right:2px solid #ee1094; 
@@ -25,9 +26,16 @@
 		 }
 	 }
   }
-.user-quotes {border:3px solid #ee8338}
+.user-quotes {
+	border:10px solid #ee8338;
+}
 
-	  
+
+
+
+
+
+
 // ncs-home-new
 	  
 	  #ncs-home-new {
@@ -43,7 +51,11 @@
 				  margin-bottom: 0;
 			  }
 		  }
+		  .ncs-masthead-container .ncs-masthead {
+			  border:0;
+		  }
 		  
+		  .button-white {float:right;}
 	  }
 
   // BRAND
@@ -656,9 +668,10 @@
 			  top: 38px;
 			  color:#000;
 		  }
-		  .primary-nav__child-list {border:0; border-left:0px solid #A50B67;}
+		  .primary-nav__child-list {border:0; border-left:0px solid #A50B67; box-shadow: #ccc 1px 0px 0px}
 		  
-		  .primary-nav__child-list .primary-nav__child-item {background-color:#fff !important;
+		  .primary-nav__child-list .primary-nav__child-item {
+			  background-color:#fff !important;
 			  text-decoration: none;
 			  left: auto;
 			  top: 38px;
@@ -674,8 +687,43 @@
 			  
 			  }
 		  }
-		  .primary-nav__item:hover > ul {text-decoration:none;}
+		  .primary-nav__item:hover > ul {
+			  text-decoration:none;
+		  }
       }
+	.primary-nav__sub-child-item {
+			display: block; overflow:hidden; 
+			a {border-left:0 !important;
+				&:hover, 
+				&:focus, 
+				&:visited {
+					border-left:0 !important;
+				}
+			}
+		}
+		.primary-nav__child-list.primary-nav__sub-child-on {
+			float:left; 
+			width:auto; 
+			border-left:0; 
+			background:#fff; 
+			border-left:2px solid #A50B67 !important;
+
+			&:hover {
+				background:#fff;
+			}
+			a {
+				border-left:0 !important;
+			}
+			.govuk-header__navigation-item {
+				padding:0 !important;
+			}
+		}
+		.primary-nav__sub-child-on .primary-nav__child-item {
+			display: inline; 
+			float:left; 
+			padding:0; 
+			margin:0
+		}
 	  
       .nav--controls {
           list-style: none;
