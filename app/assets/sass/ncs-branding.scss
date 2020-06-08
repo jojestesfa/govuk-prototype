@@ -656,7 +656,7 @@
 			  top: 38px;
 			  color:#000;
 		  }
-		  .primary-nav__child-list {border:0; border-left:2px solid #A50B67;}
+		  .primary-nav__child-list {border:0; border-left:0px solid #A50B67;}
 		  
 		  .primary-nav__child-list .primary-nav__child-item {background-color:#fff !important;
 			  text-decoration: none;
@@ -775,7 +775,7 @@
       .primary-nav__child-link .govuk-link:link, .primary-nav__child-link a:link,
       .govuk-link:visited, a:visited, .govuk-link:link, a:link  {
           color:#fff; 
-		  text-decoration: none;
+		  text-decoration: none; border-left:2px solid #A50B67;
       } 
 
   }
