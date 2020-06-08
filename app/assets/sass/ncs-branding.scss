@@ -30,7 +30,7 @@
 	border:10px solid #ee8338;
 }
 
-
+.align-center { text-align: center}
 
 
 
@@ -38,7 +38,7 @@
 
 // ncs-home-new
 	  
-	  #ncs-home-new {
+	  #ncs-home-new, .ncs-home-new {
 		  .ncs-masthead-container {
 			  .ncs-masthead .govuk-select {
 				  margin-bottom: 20px;
@@ -56,12 +56,26 @@
 		  }
 		  
 		  .button-white {float:right;}
+		  
+		  .gem-c-share-links--stacked {
+			  
+			  .gem-c-share-links__list-item {
+				  display:inline;
+			  }
+		  }
+		  .social-media-footer {
+			  background: #f3f2f1;
+		  }
+		    .brand--national-careers-service .brand__color:link, .brand--national-careers-service .brand__color:visited, .brand--national-careers-service .brand__color:active {
+      color: #777777 !important;text-decoration: none;
+  }
 	  }
+
 
   // BRAND
 
-  .colour-selector.section--brand-grey {
-      background-color: #eaebee;
+  .colour-selector.section--brand-grey, .ncs-home-new {
+      background-color: #f3f2f1;
   }
 
   @media (max-width: 505px) {
@@ -79,10 +93,21 @@
   .brand--national-careers-service .brand__color:link,.brand--national-careers-service .brand__color:visited,.brand--national-careers-service .brand__color:active {
       color: #A50B67;text-decoration: none;
   }
-
-  .brand--national-careers-service .brand__color:hover,.brand--national-careers-service .brand__color:focus {
-      color: #A50B67; text-decoration: underline;
+.ncs-home-new {
+	
+	.brand__color:link,  .brand__color:visited, .brand__color:active {
+      color: #777 !important;
   }
+.brand__color:hover {
+      color: #3c4141 !important;
+  }
+
+  
+	  
+  }
+.brand--national-careers-service .brand__color:hover,.brand--national-careers-service .brand__color:focus {
+      color: #A50B67; text-decoration: underline;
+	}
   //LINKS 
   .govuk-link:link, a:link {
       color: $ncs-link-colour;
