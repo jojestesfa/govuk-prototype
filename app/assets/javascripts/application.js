@@ -9,7 +9,7 @@ $(document).ready(function () {
   window.GOVUKFrontend.initAll();
   $('main.govuk-main-wrapper#main-content').closest('div.govuk-width-container').removeClass('govuk-width-container');
 
-  var n = $("#nav-primary")
+  var n = $("#nav-primary,#nav-primary-new")
    , r = $("#searchBar")
    , e = $(".js-nav")
    , t = $(".js-expandable")
