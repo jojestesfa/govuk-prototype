@@ -69,6 +69,11 @@ $(document).ready(function () {
 		$(".viewport-sm .primary-nav__link").on("click", function(e) { 
   		e.preventDefault();
 		$(this).next().toggleClass("js-nav-hidden");
+		
+		
+
+        
+	
   })
 	
 })
