@@ -600,7 +600,7 @@ div,span,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code
 
 
 // NCS BRANDING
-
+.brand-color {color:#231f20;}
 .brand--national-careers-service .brand__border-color,.brand--national-careers-service .brand__border-color {
     border-color: #231f20
 }
@@ -2287,3 +2287,4 @@ div,span,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code
 
 @import "patterns/cookies";
 @import "ncs-branding.scss";
+@import "map.css";

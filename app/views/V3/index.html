@@ -1,0 +1,192 @@
+{% extends "layout_ncs_v3.html" %}
+
+{% block pageTitle %}
+National Careers Service - Home
+{% endblock %}
+
+
+{% block content %}
+<div id="ncs-home-v3">
+  <section class="brand--national-careers-service organisation__section-wrap organisation__margin-bottom " id="main-content">
+    <div class="govuk-width-container govuk-!-margin-bottom-3 govuk-!-margin-top-3">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds govuk-!-padding-0">
+          <div class="ncs-main-banner govuk-!-margin-left-3 govuk-!-margin-right-0 govuk-!-margin-bottom-5">
+            <div class="govuk-grid-column-one-half banner-title">
+              <div class="main-content">
+                <h2 class="govuk-heading-l govuk-!-margin-bottom-2" wiid="C378">Free, impartial careers advice
+                  and guidance for England.</h2>
+                <p class="govuk-body-m">To help you make career
+                  decisions, achieve your goals
+                  and to develop the skills you
+                  need to find a job.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="govuk-grid-column-one-third govuk-!-padding-left-5">
+          <div class="section-featured">
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Featured pages</h2>
+            <ol class="app-c-topic-list app-c-topic-list--small brand--national-careers-service ">
+              <li class="app-c-topic-list__item"> <a class="govuk-link app-c-topic-list__link app-c-topic-list__link--no-underline brand__color" href="#">Job profiles</a> </li>
+              <li class="app-c-topic-list__item"> <a class="govuk-link app-c-topic-list__link app-c-topic-list__link--no-underline brand__color" href="#">Personal skills assessment</a> </li>
+              <li class="app-c-topic-list__item"> <a class="govuk-link app-c-topic-list__link app-c-topic-list__link--no-underline brand__color" href="#">Find a course</a> </li>
+              <li class="app-c-topic-list__item"> <a class="govuk-link app-c-topic-list__link app-c-topic-list__link--no-underline brand__color" href="#">The Skills Toolkit</a> </li>
+              <li class="app-c-topic-list__item"> <a class="govuk-link app-c-topic-list__link app-c-topic-list__link--no-underline brand__color" href="#">Improve your CV</a> </li>
+              <li class="app-c-topic-list__item"> <a class="govuk-link app-c-topic-list__link app-c-topic-list__link--no-underline brand__color" href="#">Interview skills</a> </li>
+              <li class="app-c-topic-list__item"> <a class="govuk-link app-c-topic-list__link app-c-topic-list__link--no-underline brand__color" href="#">World Skills UK</a> </li>
+              <li class="app-c-topic-list__item"> <a class="govuk-link app-c-topic-list__link app-c-topic-list__link--no-underline brand__color" href="V3/advertised-job-vacancies-2">Finding job vacancies</a> </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="brand--national-careers-service brand__border-color organisation__section-wrap organisation__margin-bottom ncs-masthead-container colour-selector section--brand-grey" id="what-you-need-support">
+    <div class="govuk-width-container ">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third govuk-!-padding-left-3 govuk-!-padding-top-3 govuk-!-padding-right-5 tell-us-text-background">
+          <h2 class="govuk-heading-l govuk-!-margin-bottom-2 govuk-!-margin-2" wiid="C378">Tell us how we can help</h2>
+          <p class="govuk-body-m">Career management is a series of steps that can help you towards your
+            goal. Tell us us a bit about yourself so we can suggest some first steps for
+            you to take.</p>
+        </div>
+        <div class="govuk-grid-column-two-third govuk-!-padding-5 ">
+          <form action="/V3/your-next-steps-2" method="post" class="form ncs-masthead align-center" id="your-next-steps">
+            <div class="gem-c-govspeak govuk-govspeak" data-module="govspeak">
+              <div class="your-next-steps-form govuk-!-padding-3 govuk-!-margin-bottom-3" style="overflow: hidden"> <span class="govuk-body-m">I am aged&nbsp;
+                <select class="govuk-select" id="age" name="support-need" aria-label="I am aged options">
+                  <option value="" selected></option>
+                  <option value="published">under 16</option>
+                  <option value="updated">17-18</option>
+                  <option value="views">19-24</option>
+                  <option value="comments">25-34</option>
+                  <option value="comments">35+</option>
+                </select>
+                </span> <span class="govuk-body-m"> &nbsp;&nbsp; and currently  &nbsp;
+                <select class="govuk-select" id="work-status" name="support-need" aria-label="I am currently options">
+                  <option value="" selected></option>
+                  <option value="published">employed</option>
+                  <option value="updated">unemployed</option>
+                  <option value="views">in education</option>
+                  <option value="comments">furloughed</option>
+                  <option value="comments">facing redundancy</option>
+                </select>
+                </span> <span class="govuk-body-m next-line" style="padding-top:20px">I am looking for &nbsp;
+                <select class="govuk-select" id="my-need" name="support-need" aria-label="I am looking for options">
+                  <option value="" selected></option>
+                  <option value="published">advice on career pathways</option>
+                  <option value="published">understanding my options</option>
+                  <option value="updated">advice on getting a job</option>
+                  <option value="views">advice on job applications (e.g. CVs)</option>
+                  <option value="comments">courses and qualifications</option>
+                  <option value="comments">apprenticeships and traineeships</option>
+                  <option value="updated">funding options</option>
+                  <option value="updated">work experience</option>
+                </select>
+                </span> </div>
+              <div>
+                <input class="govuk-button" type="submit" value="Show me what's next">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="brand--national-careers-service brand__border-color organisation__section-wrap organisation__margin-bottom section-stay-update " id="stay-up-to-date">
+    <div class="govuk-grid-row govuk-width-container govuk-!-margin-bottom-0 govuk-!-margin-top-5 govuk-!-padding-0 govuk-!-padding-top-3">
+      <div class="govuk-grid-column-one-half  govuk-!-padding-left-0">
+        <div class="overflow-hidden govuk-!-padding-right-5 govuk-!-padding-left-0">
+          <figure class="gem-c-image-card__image-wrapper"> <img class="gem-c-image-card__image" alt="" src="/public/images/speak-to-an-adviser.png"> </figure>
+          <div class="gem-c-image-card govuk-!-padding-2 govuk-!-margin-bottom-0">
+            <div class="gem-c-image-card__text-wrapper "> <span class="gem-c-image-card__title">
+              <h2 class="govuk-heading-m">Speak to a careers adviser </h2>
+              </span>
+              <p class="govuk-body-s  govuk-!-margin-top-2">Wherever you are in your
+                decision-making, you can
+                call us on <strong>0800 100 900</strong> or use <a href="#" class="govuk-link">webchat</a>. </p>
+              <p class="govuk-body-s">Our advisers can discuss your strengths, skills
+                and ambitions to help you consider your options. </p>
+            </div>
+          </div>
+        </div>
+        <div class="govuk-grid-column-full-width govuk-!-padding-3 user-quotes govuk-!-margin-top-0">
+          <p class="govuk-body-s user-quote"> <span class="user-quote-icon"> <img src="/public/images/icons/quote-l.png" width="41" height="37" alt=""/> </span> <span class="govuk-body-s user-quote-text">I wasn’t sure where to start when considering a change in career.
+            Using some of support on the National Careers Service website
+            helped me to understand what my options are and how I can get
+            into the career I’m interested in.</span> <span class="user-quote-icon-right" style="position: absolute"> <img src="/public/images/icons/quote-r.png" width="41" height="37" alt=""/> </span> </p>
+          <p class="govuk-body-s govuk-!-padding-0 govuk-!-margin-0 govuk-!-font-weight-bold"> Sarah, aged 40, Doncaster</p>
+          <p class="govuk-body-s govuk-!-padding-0 govuk-!-margin-0 govuk-!-margin-top-3 "><a href="#" class="govuk-link">Find out more about Sarah</a></p>
+        </div>
+      </div>
+      <div class="govuk-grid-column-one-half govuk-!-padding-0 govuk-!-padding-left-5 govuk-!-padding-right-0" id="get-help-local">
+        <h2 class="govuk-heading-m">Learn more about your local job market</h2>
+        <p class="govuk-body govuk-!-font-size-16">Learn more about your local labour market and the
+          support available from your local careers team.</p>
+        <p class="govuk-body govuk-!-font-size-16"> Select your region</p>
+        <div class="gem-c-image-card"> <figure class="gem-c-image-card__image-wrapper"> <a href="v3/local_area"><img class="gem-c-image-card__image" alt="" src="/public/images/select-region.png"></a> </figure> </div>
+      </div>
+    </div>
+  </section>
+  <section class="brand--national-careers-service brand__border-color organisation__section-wrap organisation__margin-bottom section-stay-update govuk-!-margin-top-5" id="follow-us">
+    <div class="govuk-grid-row govuk-width-container govuk-!-margin-bottom-0 govuk-!-margin-top-0 brand__border-color organisation__brand-border-top">
+      <div class="govuk-grid-column-one-third govuk-!-padding-left-0">
+        <blockquote class="twitter-tweet">
+          <p lang="en" dir="ltr">From 6 pm tonight, our expert adviser Mark will be online to answer your questions about careers, employment, education and training. Just ask your questions in the comments or send us a message. <a href="https://twitter.com/hashtag/AskNationalCareers?src=hash&amp;ref_src=twsrc%5Etfw">#AskNationalCareers</a><a href="https://twitter.com/hashtag/WednesdayWisdom?src=hash&amp;ref_src=twsrc%5Etfw">#WednesdayWisdom</a> <a href="https://t.co/1kpFUsuT79">pic.twitter.com/1kpFUsuT79</a></p>
+          &mdash; National Careers (@NationalCareers) <a href="https://twitter.com/NationalCareers/status/1268148207592275968?ref_src=twsrc%5Etfw">June 3, 2020</a></blockquote>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+      </div>
+      <div class="govuk-grid-column-one-third govuk-!-padding-5 govuk-!-padding-left-8 govuk-!-padding-top-0 govuk-!-margin-top-0 ">
+        <h3 class="gem-c-heading  gem-c-heading--font-size-19   govuk-!-margin-bottom-3">Follow us</h3>
+        <div class="gem-c-share-links gem-c-share-links--stacked brand--home-office" data-module="track-click">
+          <ul class="gem-c-share-links__list">
+            <li class="gem-c-share-links__list-item"> <a target="_blank" rel="noopener noreferrer external" data-track-category="social media" data-track-action="twitter" class="gem-c-share-links__link brand__color" href="https://twitter.com/NationalCareers"> <span class="gem-c-share-links__link-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+                <path fill="currentColor" d="M31.007 0H.993A.999.999 0 0 0 0 .993v30.014c0 .55.452.993.993.993h30.014a.997.997 0 0 0 .993-.993V.993A.998.998 0 0 0 31.007 0z"></path>
+                <path fill="#FFF" d="M8 21.027a9.286 9.286 0 0 0 5.032 1.475c6.038 0 9.34-5.002 9.34-9.339 0-.143-.004-.284-.012-.425a6.619 6.619 0 0 0 1.639-1.699c-.6.265-1.234.439-1.885.516a3.287 3.287 0 0 0 1.443-1.816 6.571 6.571 0 0 1-2.086.797 3.28 3.28 0 0 0-5.592 2.993 9.311 9.311 0 0 1-6.766-3.43 3.294 3.294 0 0 0-.443 1.651 3.28 3.28 0 0 0 1.46 2.732 3.278 3.278 0 0 1-1.488-.411v.041a3.288 3.288 0 0 0 2.633 3.22 3.28 3.28 0 0 1-1.481.055 3.285 3.285 0 0 0 3.065 2.281 6.59 6.59 0 0 1-4.076 1.404A6.76 6.76 0 0 1 8 21.027z"></path>
+              </svg>
+              </span> <span class="govuk-visually-hidden"> Follow on </span> Twitter </a> </li>
+            <li class="gem-c-share-links__list-item"> <a target="_blank" rel="noopener noreferrer external" data-track-category="social media" data-track-action="facebook" class="gem-c-share-links__link brand__color" href="https://www.facebook.com/NationalCareersService/"> <span class="gem-c-share-links__link-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+                <path fill="currentColor" d="M31.006 0H.993A.997.997 0 0 0 0 .993v30.014c0 .55.452.993.993.993h30.013a.998.998 0 0 0 .994-.993V.993A.999.999 0 0 0 31.006 0z"></path>
+                <path fill="#FFF" d="M17.892 10.751h1.787V8.009L17.216 8c-2.73 0-3.352 2.045-3.352 3.353v1.828h-1.581v2.824h1.581V24h3.322v-7.995h2.242l.291-2.824h-2.533V11.52c.001-.623.415-.769.706-.769z"></path>
+              </svg>
+              </span> <span class="govuk-visually-hidden"> Follow on </span> Facebook </a> </li>
+            <li class="gem-c-share-links__list-item"> <a target="_blank" rel="noopener noreferrer external" data-track-category="social media" data-track-action="linkedin" class="gem-c-share-links__link brand__color" href="https://www.linkedin.com/company/national-careers/"> <span class="gem-c-share-links__link-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="9 9 32 32">
+                <path fill="currentColor" d="M9 9h32v32H9V9z"></path>
+                <path fill="#FFF" d="M19.24 35.24V21.8h-4.48v13.44h4.48z"></path>
+                <defs>
+                  <path d="M9 9h32v32H9z"></path>
+                </defs>
+                <clippath>
+                  <use xlink:href="#a" overflow="visible"></use>
+                </clippath>
+                <path clip-path="url(#b)" fill="#FFF" d="M26.28 35.24V28.2c0-1.92.64-3.2 1.92-3.2h.64c1.28 0 1.92 1.28 1.92 4.48v5.76h4.48V28.2c0-4.48-1.28-6.4-4.48-6.4-3.84 0-4.479 1.92-4.479 1.92V21.8H21.8v13.44h4.48zm-6.72-17.92a2.56 2.56 0 1 1-5.12 0 2.56 2.56 0 0 1 5.12 0"></path>
+              </svg>
+              </span> <span class="govuk-visually-hidden"> Follow on </span> LinkedIn </a> </li>
+            <li class="gem-c-share-links__list-item"> <a target="_blank" rel="noopener noreferrer external" data-track-category="social media" data-track-action="youtube" class="gem-c-share-links__link brand__color" href="https://www.youtube.com/channel/UC2t6vAYuH944oyMPeb7L9QQ"> <span class="gem-c-share-links__link-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="9 9 32 32">
+                <path fill="currentColor" d="M9 9h32v32H9V9z"></path>
+                <path fill="#FFF" d="M19.88 33.32V16.68L33.32 25l-13.44 8.32z"></path>
+              </svg>
+              </span> <span class="govuk-visually-hidden"> Follow on </span> YouTube </a> </li>
+          </ul>
+        </div>
+      </div>
+<!--
+      <div class="govuk-grid-column-one-third  govuk-!-padding-left-0">
+        <h2 class="govuk-heading-m">Scotland, Wales and Northern Ireland</h2>
+        <p class="govuk-body-s">The National Careers Service offers advice about careers and skills in England. For careers advice in other parts of the UK visit:</p>
+        <ul class="govuk-list govuk-list--bullet govuk-body-s">
+          <li class="brand--national-careers-service"><a href="https://www.myworldofwork.co.uk/" class="brand__color">Skills Development Scotland - My World of Work</a></li>
+          <li class="brand--national-careers-service"><a href="https://www.careerswales.com/en/" class="brand__color">Careers Wales</a></li>
+          <li class="brand--national-careers-service"><a href="https://www.nidirect.gov.uk/campaigns/careers" class="brand__color">Careers Service Northern Ireland</a></li>
+        </ul>
+      </div>
+-->
+    </div>
+  </section>
+</div>
+{% endblock %} 
