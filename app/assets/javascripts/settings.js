@@ -53,11 +53,10 @@ var map_cfg = {
             "id": 3,
             "name": "Anglesey",
             "shortname": "",
-            "link": "",
             "comment": "",
             "image": "",
-            "color": "#7798BA",
-            "colorOver": "#366CA3"
+            "color": "#ffffff",
+            "colorOver": "#ffffff"
         },
         "st4": {
             "id": 4,
@@ -119,21 +118,19 @@ var map_cfg = {
             "id": 10,
             "name": "Blaenau Gwent",
             "shortname": "",
-            "link": "",
             "comment": "",
             "image": "",
-            "color": "#7798BA",
-            "colorOver": "#366CA3"
+            "color": "#ffffff",
+            "colorOver": "#ffffff"
         },
         "st11": {
             "id": 11,
             "name": "Bridgend",
             "shortname": "",
-            "link": "",
             "comment": "",
             "image": "",
-            "color": "#7798BA",
-            "colorOver": "#366CA3"
+            "color": "#ffffff",
+            "colorOver": "#ffffff"
         },
         "st12": {
             "id": 12,
@@ -159,11 +156,10 @@ var map_cfg = {
             "id": 14,
             "name": "Caerphilly",
             "shortname": "",
-            "link": "",
             "comment": "",
             "image": "",
-            "color": "#7798BA",
-            "colorOver": "#366CA3"
+            "color": "#ffffff",
+            "colorOver": "#ffffff"
         },
         "st15": {
             "id": 15,
@@ -179,31 +175,28 @@ var map_cfg = {
             "id": 16,
             "name": "Cardiff",
             "shortname": "",
-            "link": "",
             "comment": "",
             "image": "",
-            "color": "#7798BA",
-            "colorOver": "#366CA3"
+            "color": "#ffffff",
+            "colorOver": "#ffffff"
         },
         "st17": {
             "id": 17,
             "name": "Carmarthenshire",
             "shortname": "",
-            "link": "",
             "comment": "",
             "image": "",
-            "color": "#7798BA",
-            "colorOver": "#366CA3"
+            "color": "#ffffff",
+            "colorOver": "#ffffff"
         },
         "st18": {
             "id": 18,
             "name": "Ceredigion",
             "shortname": "",
-            "link": "",
             "comment": "",
             "image": "",
-            "color": "#7798BA",
-            "colorOver": "#366CA3"
+            "color": "#ffffff",
+            "colorOver": "#ffffff"
         },
         "st19": {
             "id": 19,
@@ -237,11 +230,10 @@ var map_cfg = {
             "id": 22,
             "name": "Conwy",
             "shortname": "",
-            "link": "",
             "comment": "",
             "image": "",
-            "color": "#7798BA",
-            "colorOver": "#366CA3"
+            "color": "#ffffff",
+            "colorOver": "#ffffff"
         },
         "st23": {
             "id": 23,
@@ -266,11 +258,10 @@ var map_cfg = {
             "id": 25,
             "name": "Denbighshire",
             "shortname": "",
-            "link": "",
             "comment": "",
             "image": "",
-            "color": "#7798BA",
-            "colorOver": "#366CA3"
+            "color": "#fff",
+            "colorOver": "#fff"
         },
         "st26": {
             "id": 26,
@@ -446,11 +437,10 @@ var map_cfg = {
             "id": 44,
             "name": "Flintshire",
             "shortname": "",
-            "link": "",
             "comment": "",
             "image": "",
-            "color": "#7798BA",
-            "colorOver": "#366CA3"
+            "color": "#fff",
+            "colorOver": "#fff"
         },
         "st45": {
             "id": 45,
@@ -494,11 +484,10 @@ var map_cfg = {
             "id": 49,
             "name": "Gwynedd",
             "shortname": "",
-            "link": "",
             "comment": "",
             "image": "",
-            "color": "#7798BA",
-            "colorOver": "#366CA3"
+            "color": "#ffffff",
+            "colorOver": "#ffffff"
         },
         "st50": {
             "id": 50,
@@ -630,11 +619,10 @@ var map_cfg = {
             "id": 63,
             "name": "Merthyr Tydfil",
             "shortname": "",
-            "link": "",
             "comment": "",
             "image": "",
-            "color": "#7798BA",
-            "colorOver": "#366CA3"
+            "color": "#ffffff",
+            "colorOver": "#ffffff"
         },
         "st64": {
             "id": 64,
@@ -649,11 +637,10 @@ var map_cfg = {
             "id": 65,
             "name": "Monmouthshire",
             "shortname": "",
-            "link": "",
             "comment": "",
             "image": "",
-            "color": "#7798BA",
-            "colorOver": "#366CA3"
+            "color": "#ffffff",
+            "colorOver": "#ffffff"
         },
         "st66": {
             "id": 66,
@@ -668,21 +655,19 @@ var map_cfg = {
             "id": 67,
             "name": "Neath Port Talbot",
             "shortname": "",
-            "link": "",
             "comment": "",
             "image": "",
-            "color": "#7798BA",
-            "colorOver": "#366CA3"
+            "color": "#ffffff",
+            "colorOver": "#ffffff"
         },
         "st68": {
             "id": 68,
             "name": "Newport",
             "shortname": "",
-            "link": "",
             "comment": "",
             "image": "",
-            "color": "#7798BA",
-            "colorOver": "#366CA3"
+            "color": "#ffffff",
+            "colorOver": "#ffffff"
         },
         "st69": {
             "id": 69,
@@ -775,11 +760,10 @@ var map_cfg = {
             "id": 78,
             "name": "Pembrokeshire",
             "shortname": "",
-            "link": "",
             "comment": "",
             "image": "",
-            "color": "#7798BA",
-            "colorOver": "#366CA3"
+            "color": "#ffffff",
+            "colorOver": "#ffffff"
         },
         "st79": {
             "id": 79,
@@ -794,11 +778,10 @@ var map_cfg = {
             "id": 80,
             "name": "Powys",
             "shortname": "",
-            "link": "",
             "comment": "",
             "image": "",
-            "color": "#7798BA",
-            "colorOver": "#366CA3"
+            "color": "#ffffff",
+            "colorOver": "#ffffff"
         },
         "st81": {
             "id": 81,
@@ -813,11 +796,10 @@ var map_cfg = {
             "id": 82,
             "name": "Rhondda Cynon Taff",
             "shortname": "",
-            "link": "",
             "comment": "",
             "image": "",
-            "color": "#7798BA",
-            "colorOver": "#366CA3"
+            "color": "#ffffff",
+            "colorOver": "##ffffff"
         },
         "st83": {
             "id": 83,
@@ -938,21 +920,19 @@ var map_cfg = {
             "id": 95,
             "name": "Swansea",
             "shortname": "",
-            "link": "",
             "comment": "",
             "image": "",
-            "color": "#7798BA",
-            "colorOver": "#366CA3"
+            "color": "#ffffff",
+            "colorOver": "#ffffff"
         },
         "st96": {
             "id": 96,
             "name": "Torfaen",
             "shortname": "",
-            "link": "",
             "comment": "",
             "image": "",
-            "color": "#7798BA",
-            "colorOver": "#366CA3"
+            "color": "#ffffff",
+            "colorOver": "#ffffff"
         },
         "st97": {
             "id": 97,
@@ -977,11 +957,10 @@ var map_cfg = {
             "id": 99,
             "name": "Vale of Glamorgan",
             "shortname": "",
-            "link": "",
             "comment": "",
             "image": "",
-            "color": "#7798BA",
-            "colorOver": "#366CA3"
+            "color": "#ffffff",
+            "colorOver": "#ffffff"
         },
         "st100": {
             "id": 100,
@@ -1074,11 +1053,10 @@ var map_cfg = {
             "id": 109,
             "name": "Wrexham",
             "shortname": "",
-            "link": "",
             "comment": "",
             "image": "",
-            "color": "#7798BA",
-            "colorOver": "#366CA3"
+            "color": "#fff",
+            "colorOver": "#fff"
         }
     },
     "points": {}
