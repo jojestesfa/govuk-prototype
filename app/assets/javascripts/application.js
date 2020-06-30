@@ -77,6 +77,40 @@ $(document).ready(function () {
   })
 	
 })
+$().ready(function () {
+
+	
+	
+	
+	var $select1 = $( '#select1' ),
+		$select2 = $( '#select2' ),
+		$select3 = $( '#select3' ),
+    $options = $select2.find( 'option' ),
+		 $options2 = $select3.find( 'option' );
+    
+$select1.on( 'change', function() {
+	$select2.html( $options.filter( '[value="' + this.value + '"]' ) );
+} ).trigger( 'change' );
+	
+	$select2.on( 'change', function() {
+	$select3.html( $options2.filter( '[value="' + this.value + '"]' ) );
+} ).trigger( 'change' );
+	
+
+});
+
+function setChild(value){
+    //Have your three child selector names as follows in your markup as well and assuming they are not in divs
+    var arr = [ "dateselector_child_", "dateselector_child_1", "dateselector_child_2"];
+
+    jQuery.each(arr, function() {
+            if(this == "dateselector_child_" + value){
+                $("#" + this).show();
+            }else{
+                $("#" + this).hide();
+            }
+     });
+}
 
 
 

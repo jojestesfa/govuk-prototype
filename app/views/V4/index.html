@@ -7,6 +7,14 @@ National Careers Service - Home
 
 {% block content %}
 <div id="ncs-home-v3">
+	<section class="brand--national-careers-service organisation__section-wrap organisation__margin-bottom " id="main-content">
+    <div class="govuk-width-container govuk-!-margin-bottom-3 govuk-!-margin-top-3">
+      <div class="govuk-grid-row"><div class="covid-banner">
+    <h2 class="heading-medium" wiid="C298">
+        Coronavirus (COVID-19): to find out about changes to apprenticeships and ways of working, <a href="https://help.apprenticeships.education.gov.uk/hc/en-gb/sections/360003798540-Apprentice" target="_blank" wiid="C299">read our guidance for apprentices</a>.
+    </h2>
+		  </div></div></div></section>
+</div>
   <section class="brand--national-careers-service organisation__section-wrap organisation__margin-bottom " id="main-content">
     <div class="govuk-width-container govuk-!-margin-bottom-3 govuk-!-margin-top-3">
       <div class="govuk-grid-row">
@@ -54,7 +62,8 @@ National Careers Service - Home
         <div class="govuk-grid-column-two-third govuk-!-padding-5 ">
           <form action="/V4/your-next-steps-2" method="post" class="form ncs-masthead align-center" id="your-next-steps">
             <div class="gem-c-govspeak govuk-govspeak" data-module="govspeak">
-              <div class="your-next-steps-form govuk-!-padding-3 govuk-!-margin-bottom-3" style="overflow: hidden"> <span class="govuk-body-m"> &nbsp;&nbsp;I am and currently  &nbsp;
+              <div class="your-next-steps-form govuk-!-padding-3 govuk-!-margin-bottom-3" style="overflow: hidden"> <span class="govuk-body-m"> &nbsp;&nbsp;I am and currently  &nbsp; 
+                <!--
                 <select class="govuk-select" id="work-status" name="support-need" aria-label="I am currently options">
                   <option value="" selected></option>
                   <option value="published">employed</option>
@@ -62,7 +71,16 @@ National Careers Service - Home
                   <option value="comments">furloughed</option>
                   <option value="comments">facing redundancy</option>
                 </select>
-                </span> <span class="govuk-body-m">&nbsp;&nbsp;and aged&nbsp;
+-->
+                <select name="select1" id="select1" class="govuk-select" name="currently" aria-label="I am looking for options">
+                <option value="none" selected disabled hidden></option>
+                <option value="1">Employed</option>
+                <option value="2">In-education</option>
+                <option value="3">Furloughed</option>
+                <option value="4">Facing redundancy</option>
+                </select>
+                </span> <span class="govuk-body-m">&nbsp;&nbsp;and aged&nbsp; 
+                <!--
                 <select class="govuk-select" id="age" name="support-need" aria-label="I am aged options">
                   <option value="" selected></option>
                   <option value="under-16">under 16</option>
@@ -72,8 +90,31 @@ National Careers Service - Home
                   <option value="comments">35-49</option>
                   <option value="comments">50+</option>
                 </select>
+-->
+                <select name="select2" id="select2" class="govuk-select govuk-input--width-5" style="width:100px" name="age" aria-label="I am looking for options">
+                <option value="1" selected></option>
+                <option value="1">18-24</option>
+                <option value="1">25-34</option>
+                <option value="1">35-49</option>
+                <option value="1">50+</option>
+                <option value="2" selected></option>
+                <option value="2">Under 16</option>
+                <option value="2">16-17</option>
+                <option value="2">18-24</option>
+                <option value="3" selected></option>
+                <option value="3">18-24</option>
+                <option value="3">25-34</option>
+                <option value="3">35-49</option>
+                <option value="3">50+</option>
+                <option value="4" selected></option>
+                <option value="4">18-24</option>
+                <option value="4">25-34</option>
+                <option value="4">35-49</option>
+                <option value="4">50+</option>
+                </select>
                 </span> <span class="govuk-body-m next-line" style="padding-top:20px">and looking for &nbsp;
-                <select class="govuk-select" id="my-need" name="support-need" aria-label="I am looking for options">
+<!--
+                <select class="govuk-select govuk-!-width-two-thirds" id="my-need" name="looking-for" aria-label="I am looking for options">
                   <option value="" selected></option>
                   <option value="published">advice on career pathways (incl. Volunteering / internships)</option>
                   <option value="published">understanding my options</option>
@@ -85,8 +126,32 @@ National Careers Service - Home
                   <option value="updated">skills assessment</option>
                   <option value="updated">work experience</option>
                 </select>
-                </span>
+-->
                 
+                <select name="select3" id="select3" style="min-width: 350px !important" class="govuk-select govuk-!-width-two-thirds" name="looking-for" aria-label="I am looking for options">
+                <option value="" selected></option>
+					<option value="1" selected></option>
+                <option value="1">Understanding my options</option>
+                <option value="1">Advice on getting a job (incl self employment)</option>
+                <option value="1">Courses and qualifications (further education / training)</option>
+                <option value="1">Funding options</option>
+                <option value="1">Skills assessement</option>
+                <option value="2" selected></option>
+                <option value="2">Understanding my options</option>
+                <option value="2">Advice on getting a job (incl self employment)</option>
+                <option value="2">Advice on job applications (e.g. CVs)</option>
+                <option value="2">Skills assessement</option>
+                <option value="3" selected></option>
+                <option value="3">Understanding my options</option>
+                <option value="3">Advice on getting a job (incl self employment)</option>
+                <option value="3">Advice on job applications (e.g. CVs)</option>
+                <option value="3">Skills assessement</option>
+                <option value="4" selected></option>
+                <option value="4">Understanding my options</option>
+                <option value="4">Advice on getting a job (incl self employment)</option>
+                <option value="4">Advice on job applications (e.g. CVs)</option>
+                <option value="4">Skills assessement</option>
+                </select></span>
               </div>
               <div>
                 <input class="govuk-button" type="submit" value="Show me what's next">
@@ -136,8 +201,32 @@ National Careers Service - Home
   </section>
   <section class="brand--national-careers-service brand__border-color organisation__section-wrap organisation__margin-bottom section-stay-update govuk-!-margin-top-5" id="follow-us">
     <div class="govuk-grid-row govuk-width-container govuk-!-margin-bottom-0 govuk-!-margin-top-0 brand__border-color organisation__brand-border-top">
-      <div class="govuk-grid-column-one-third govuk-!-padding-left-0">
-        <a class="twitter-timeline" data-height="500" data-theme="light" href="Search Results
+      <div class="govuk-grid-column-one-third  govuk-!-padding-left-0">
+        <h2 class="gem-c-heading  gem-c-heading--font-size-19   govuk-!-margin-bottom-3">Latest news</h2>
+        <div class="view view-home-page view-id-home_page view-display-id-panel_pane_news view-dom-id-e14b801c953aa80df11e8aed0251e8f4" wiid="C486">
+          <div class="view-content  govuk-!-padding-bottom-3" wiid="C487">
+            <ul class="list-unstyled" wiid="C488">
+              <li class="" wiid="C489">
+                <div class="govuk-summary-list__key govuk-!-margin-bottom-3"><p class="govuk-!-margin-bottom-3" wiid="C490"><a href="#">Virtual job fair brings jobseekers and employers together at crucial time</a></p>
+                <p class="govuk-body-s">12 Jun 2020</p></div>
+              </li>
+              
+              <li class="" wiid="C497">
+				  <div class="govuk-summary-list__key govuk-!-margin-bottom-3">
+                <p class="govuk-!-margin-top-3" wiid="C498"><a href="https://www.gov.uk/government/news/national-careers-service-virtual-jobs-fair-returns-on-june-8" wiid="C499">National Careers Service Virtual Jobs Fair returns on June 8</a></p>
+                <p class="govuk-body-s" wiid="C500">8 Jun 2020</p>
+				  </div>
+              </li>
+				<div class="govuk-summary-list__key govuk-!-margin-bottom-3">
+				<li class="" wiid="C493">
+                <p class="govuk-!-margin-bottom-3" wiid="C494"><a href="#" wiid="C495">Over 1000 jobs promoted to local job seekers at National Careers Service virtual jobs fair</a></p>
+					<p class="govuk-body-s" wiid="C496">14 May 2020</p></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <a href="#" class="btn btn-primary  govuk-!-margin-top-3">View all news</a> </div>
+      <div class="govuk-grid-column-one-third govuk-!-padding-left-0"> <a class="twitter-timeline" data-height="500" data-theme="light" href="Search Results
 Twitter results
 https://twitter.com/NationalCareers">Tweets by Natioanl Careers</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
       </div>
@@ -179,17 +268,6 @@ https://twitter.com/NationalCareers">Tweets by Natioanl Careers</a> <script asyn
           </ul>
         </div>
       </div>
-      <!--
-      <div class="govuk-grid-column-one-third  govuk-!-padding-left-0">
-        <h2 class="govuk-heading-m">Scotland, Wales and Northern Ireland</h2>
-        <p class="govuk-body-s">The National Careers Service offers advice about careers and skills in England. For careers advice in other parts of the UK visit:</p>
-        <ul class="govuk-list govuk-list--bullet govuk-body-s">
-          <li class="brand--national-careers-service"><a href="https://www.myworldofwork.co.uk/" class="brand__color">Skills Development Scotland - My World of Work</a></li>
-          <li class="brand--national-careers-service"><a href="https://www.careerswales.com/en/" class="brand__color">Careers Wales</a></li>
-          <li class="brand--national-careers-service"><a href="https://www.nidirect.gov.uk/campaigns/careers" class="brand__color">Careers Service Northern Ireland</a></li>
-        </ul>
-      </div>
---> 
     </div>
   </section>
 </div>
