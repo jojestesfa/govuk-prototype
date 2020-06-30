@@ -6,6 +6,9 @@ National Careers Service - Home
 
 
 {% block content %}
+<script type='text/javascript'>
+var map = new FlaMap(map_cfg);
+  map.drawOnDomReady('map-container');</script>
 <div id="ncs-home-v3">
 <!--
 	<section class="brand--national-careers-service organisation__section-wrap organisation__margin-bottom " id="main-content">
@@ -195,8 +198,9 @@ National Careers Service - Home
           support available from your local careers team.</p>
         <p class="govuk-body govuk-!-font-size-16"> Select your region</p>
         <div class="gem-c-image-card">
-          <figure class="gem-c-image-card__image-wrapper"> <a href="V3/local_area"><img class="gem-c-image-card__image" alt="" src="/public/images/select-region.png"></a> </figure>
+<!--          <figure class="gem-c-image-card__image-wrapper"> <a href="V3/local_area"><img class="gem-c-image-card__image" alt="" src="/public/images/select-region.png"></a> </figure>--><div id="map-container"></div>
         </div>
+		  
       </div>
     </div>
   </section>

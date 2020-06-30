@@ -1,5 +1,7 @@
 <!--[if lte IE 8]><link href="/public/stylesheets/application-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
-<!--[if gt IE 8]><!--><link href="/public/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" /><!--<![endif]-->
+<!--[if gt IE 8]><!--><link href="/public/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" />
+<link href="/public/stylesheets/map.css" rel="stylesheet">
+<!--<![endif]-->
 
 {% for stylesheetUrl in extensionConfig.stylesheets %}
   <link href="{{ stylesheetUrl }}" rel="stylesheet" type="text/css" />
@@ -16,6 +18,12 @@
 <script type="text/javascript" src="/public/javascripts/map-config.js"></script>
 <script type="text/javascript" src="/public/javascripts/map-interact.js"></script>
 <script type="text/javascript" src="/public/javascripts/pins-config.js"></script>
+
+
+<script src="/public/javascripts/raphael.min.js"></script>
+<script src="/public/javascripts/settings.js"></script>
+<script src="/public/javascripts/paths.js"></script>
+<script src="/public/javascripts/map.js"></script>
 
 <header role="banner" id="global-header" class="">
   <div class="header-wrapper">

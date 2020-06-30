@@ -50,7 +50,7 @@ $(document).ready(function () {
     n.toggleClass("nav-main--hidden");
   }),
 
- 
+  
 	
   checkPosition(); // run function after document ready
   $(window).on('resize',checkPosition); // on resize window run function
