@@ -5177,3 +5177,8 @@ a.version-link:hover {
   .page-description {
     padding-top: 6px;
     padding-bottom: 4px; } }
+.alert-box-grey {
+  margin-bottom: 15px;
+  padding: 10px; }
+  .alert-box-grey details {
+    margin-bottom: 0; }

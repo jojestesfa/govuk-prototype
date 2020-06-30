@@ -40,6 +40,14 @@ National Careers Service
   <div class="govuk-width-container govuk-!-margin-bottom-3 govuk-!-margin-top-3">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
+		  
+		  
+			
+			
+			
+			{% include "includes/your-next-steps.html" %}
+			
+			
         <div id="step-by-step-navigation" class="app-step-nav app-step-nav--large app-step-nav--active" data-show-text="Show" data-hide-text="Hide" data-show-all-text="Hide all" data-hide-all-text="Show all">
           <ol class="app-step-nav__steps">
             <li class="app-step-nav__step js-step" id="check-youre-allowed-to-drive" >
@@ -116,14 +124,10 @@ National Careers Service
           </section>
         </div>
       </div>
-      <div class="govuk-grid-column-one-third right-banner-section">
-        
-        {% include "includes/register-with-us.html" %}
-         {% include "includes/users-with-disability.html" %}
-		   {% include "includes/contact-us.html" %}
-		   {% include "includes/how-we-have-done.html" %}
-        
-      </div>
+      <div class="govuk-grid-column-one-third right-banner-section"> {% include "includes/register-with-us.html" %}
+        {% include "includes/users-with-disability.html" %}
+        {% include "includes/contact-us.html" %}
+        {% include "includes/how-we-have-done.html" %} </div>
     </div>
   </div>
 </section>
