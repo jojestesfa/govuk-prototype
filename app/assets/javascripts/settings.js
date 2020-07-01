@@ -478,7 +478,9 @@ var map_cfg = {
             "comment": "",
             "image": "",
             "color": "#7798BA",
-            "colorOver": "#000000"
+            "colorOver": "#000000",
+            "link": "/V4/local_area",
+            "isNewWindow": false
         },
         "st49": {
             "id": 49,
@@ -763,6 +765,7 @@ var map_cfg = {
             "comment": "",
             "image": "",
             "color": "#ffffff",
+
             "colorOver": "#ffffff"
         },
         "st79": {
