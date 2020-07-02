@@ -1,9 +1,14 @@
-.fm-map-container svg {
-	z-index: 1;
-	-webkit-user-select: none; /* webkit (safari, chrome) browsers */
-	-moz-user-select: none; /* mozilla browsers */
-	-khtml-user-select: none; /* webkit (konqueror) browsers */
-	-ms-user-select: none; /* IE10+ */
+.fm-map-container {
+	cursor: pointer !important;
+	svg {
+		z-index: 1;
+		-webkit-user-select: none; /* webkit (safari, chrome) browsers */
+		-moz-user-select: none; /* mozilla browsers */
+		-khtml-user-select: none; /* webkit (konqueror) browsers */
+		-ms-user-select: none; /* IE10+ */
+
+		path {cursor:pointer !important;}
+	}
 }
 .fm-tooltip {
 	display: none;
@@ -46,7 +51,7 @@
 .fm-tooltip-name {
  	color: #000;
 	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
- 	font-size: 20px;
+ 	font-size: 12px;
 	font-weight:bold;
 	padding: 5px;
 	font-family: arial;
@@ -84,7 +89,11 @@
 	left: 0px;
 	bottom: 0px;
 	z-index: 2;
-	margin: 10px
+	margin: 10px;
+	-webkit-user-select: none; /* webkit (safari, chrome) browsers */
+	-moz-user-select: none; /* mozilla browsers */
+	-khtml-user-select: none; /* webkit (konqueror) browsers */
+	-ms-user-select: none; /* IE10+ */
 }
 .fm-scale div {
 	float: left;
@@ -156,6 +165,3 @@
 		line-height: 28px;
 	}
 }
-.fm-map-container { overflow:hidden;}
-.fm-map-container svg { top:-210px !important; path {cursor:pointer;}}
-#map-container {max-height:500px;}
